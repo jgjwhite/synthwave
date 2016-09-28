@@ -1,14 +1,3 @@
-/*
-TODO --header
-* padding-top
-* h1-h6 styles
-* position header text
-* Add button style
-* Add social media links
-
-
-
-*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -349,7 +338,7 @@ textarea {
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ * the default cannot safely be changed in Chrome and Safari on OS X.
  */
 optgroup {
   font-weight: bold; }
@@ -434,9 +423,13 @@ th {
 .bit-3 {
   width: 25%; }
 
-.bit-4 {
-  width: 33.3333%;
+.bit-1-3-3 {
+  width: 100%;
   float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-1-3-3 {
+      width: 33.33333%;
+      float: left; } }
 
 .bit-5 {
   width: 41.66667%; }
@@ -538,6 +531,13 @@ h5 {
   font-weight: 300;
   font-size: 1.4em; }
 
+a {
+  text-decoration: none;
+  color: magenta; }
+
+a:hover {
+  text-shadow: 2px 2px 5px magenta; }
+
 /* ========================================
 Specific Element Styles
 ========================================
@@ -553,23 +553,23 @@ Specific Element Styles
   padding-left: 1rem; }
   .menu ul {
     list-style-type: none; }
-    .menu ul li a {
-      text-decoration: none;
-      color: #fafafa; }
 
+/*
+
+News & Media
+
+*/
 .news {
-  margin-bottom: 80px; }
+  margin-bottom: 60px; }
 
 .news-card {
   background-color: #414141;
   padding: 0;
   padding-bottom: 40px;
+  margin-bottom: 60px;
   -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6);
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6);
-  /* Firefox 3.5 - 3.6 */
-  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6);
-  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6); }
 
 .img-card {
   position: relative; }
@@ -594,6 +594,9 @@ Specific Element Styles
   padding-right: 0.9375rem; }
   .text p {
     margin-bottom: 1.2rem; }
+    @media screen and (min-width: 40em) and (max-width: 55em) {
+      .text p {
+        font-size: 85%; } }
   .text .limit {
     height: 120px; }
   .text .foot-link {
@@ -601,5 +604,22 @@ Specific Element Styles
     float: left; }
   .text .right {
     text-align: right; }
+
+/* ========================================
+Media Queries
+========================================
+*/
+@media screen and (min-width: 40em) {
+  /* 480px and above */
+  body {
+    font-size: 90%; } }
+@media screen and (min-width: 64em) {
+  /* 880 px and above */
+  body {
+    font-size: 95%; } }
+@media screen and (min-width: 75em) {
+  /* 1200px and above */
+  body {
+    font-size: 100%; } }
 
 /*# sourceMappingURL=all.css.map */

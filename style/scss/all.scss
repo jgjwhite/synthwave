@@ -2,18 +2,6 @@
 // utilize lemonade / normalizr
 // sep-21-2016
 
-/*
-TODO --header
-* padding-top
-* h1-h6 styles
-* position header text
-* Add button style
-* Add social media links
-
-
-
-*/
-
 //Downloaded normalize.css file
 @import 'normalize';
 
@@ -118,6 +106,15 @@ h5 {
   font-size: 1.4em;
 }
 
+a {
+  text-decoration: none;
+  color: $neon-pink;
+}
+
+
+a:hover { //TODO change to mixin, add to interaction layer (aggregate interactions in section too?)
+  text-shadow: 2px 2px 5px $neon-pink;
+}
 
 /* ========================================
 Specific Element Styles
@@ -141,57 +138,102 @@ Specific Element Styles
   padding-left: 1rem;
   ul {
     list-style-type: none;
-    li a {
-      text-decoration: none;
-      color: $fore-light;
-    }
   }
 }
 
 
-//News & Media
-//General Container
-.news {
-  margin-bottom: 80px;
-}
+/*
 
-//3x cards
-.news-card {
-  background-color: $bkgd-medium;
-  padding: 0;
-  padding-bottom: 40px;
-  @include shadow;
+News & Media
 
-}
+*/
 
-//images
-.img-card {
-  @include aspect-ratio(4, 3);
 
-  img {
-    max-width: 100%;
-    display:block;
-    height: auto;
+      //General Container
+      .news {
+        margin-bottom: 60px;
+      }
+
+      //3x cards
+      .news-card { //mobile setting
+        background-color: $bkgd-medium;
+        padding: 0;
+        padding-bottom: 40px;
+        margin-bottom: 60px;
+        @include shadow;
+//TODO Set a uniform px height; or reflow with content? good practice?
+
+
+      }
+
+      //images
+      .img-card {
+        @include aspect-ratio(4, 3);
+
+        img {
+          max-width: 100%;
+          display:block;
+          height: auto;
+        }
+      }
+
+      //text
+      .text {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+
+              p {
+                margin-bottom: 1.2rem;
+
+              @media screen and (min-width: 40em) and (max-width: 55em){
+                font-size: 85%; //between 640-880px
+              }
+        }
+
+        .limit {//Limit designed to overflow any text, keeping cards consistent size...
+          height: 120px;
+        }
+
+        //TODO card links -- fixing these links so that they respond to the text above?
+        .foot-link{
+          width: 50%;
+          float: left;
+        }
+        .right {
+          text-align: right;
+        }
+      }
+
+
+
+
+
+
+/* ========================================
+Media Queries
+========================================
+*/
+
+// Using em's to distinguish breakpoints per https://zellwk.com/blog/media-query-units/
+// Not a big deal, however used Foundation 6 as influence
+// Breakpoints: 0 - 640px - 1024px - 1200;
+
+//TODO how to structure media queries right? stack all changes into group, or as part of classes?
+
+@media screen and (min-width: 40em) { /* 480px and above */
+  body {
+    font-size: 90%;
   }
 }
 
-//text
-.text {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+@media screen and (min-width: 64em) { /* 880 px and above */
+  body {
+    font-size: 95%;
+  }
+}
 
-  p {
-    margin-bottom: 1.2rem;
-  }
-
-  .limit {//Limit designed to overflow any text, keeping cards consistent size...
-    height: 120px;
-  }
-  .foot-link{
-    width: 50%;
-    float: left;
-  }
-  .right {
-    text-align: right;
+@media screen and (min-width: 75em) { /* 1200px and above */
+  body {
+    font-size: 100%;
   }
 }
