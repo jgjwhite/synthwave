@@ -1,0 +1,138 @@
+// Hybrid template
+// utilize lemonade / normalizr
+// sep-21-2016
+
+/*
+TODO --header
+* padding-top
+* h1-h6 styles
+* position header text
+* Add button style
+* Add social media links
+
+
+
+*/
+
+//Downloaded normalize.css file
+@import 'normalize';
+
+//grid framework
+@import 'grid';
+
+//all variables: color, type, etc.
+@import 'var';
+
+
+
+/* ========================================
+Global Styles
+========================================
+*/
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
+  body {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $bkgd-dark;
+    color: $fore-light;
+    font-family: $body-font;
+  }
+
+html {
+  font-size: 100%;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+h1 {
+    font-family: $display-font;
+    font-weight: 700;
+    font-size: 2.6em;
+
+}
+
+h2 {
+  font-family: $display-font;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-family: $display-font;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+h4 {
+
+}
+
+h5 {
+  font-family: $display-font;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+
+/* ========================================
+Specific Element Styles
+========================================
+*/
+
+//header container
+.header {
+  height: 100vh;
+
+}
+
+//Logo Placeholder
+.logo {
+  background-color: $neon-pink;
+  padding-bottom: 33%;
+}
+
+//menu formatting
+.menu {
+  padding-left: 1rem;
+  ul {
+    list-style-type: none;
+    li a {
+      text-decoration: none;
+      color: $fore-light;
+    }
+  }
+}

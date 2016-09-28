@@ -1,0 +1,108 @@
+//Grid Framework
+//Media Queries
+
+
+//whole page wrapper
+#page {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+
+}
+
+
+
+//Row & Column Declarations
+
+.row {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .row::before, .row::after {
+    content: ' ';
+    display: table; }
+  .row::after {
+    clear: both; }
+  .row.collapse > .column, .row.collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+  .row .row {
+    max-width: none;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem; }
+    @media screen and (min-width: 40em) {
+      .row .row {
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem; } }
+    .row .row.collapse {
+      margin-left: 0;
+      margin-right: 0; }
+  .row.expanded {
+    max-width: none; }
+    .row.expanded .row {
+      margin-left: auto;
+      margin-right: auto; }
+
+
+
+
+.column, .columns {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    .column, .columns {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: right; }
+  .column.end:last-child:last-child, .end.columns:last-child:last-child {
+    float: left; }
+
+
+//bits used to represent column widths, 12-col grid
+
+.bit-1 {
+  width: 8.333%; }
+
+.bit-2 {
+    width: 16.66667%; }
+
+.bit-3 {
+    width: 25%;
+}
+
+.bit-4 {
+    width: 33.3333%;
+}
+
+.bit-5 {
+    width: 41.66667%;
+}
+
+.bit-6 {
+  width: 50%;
+}
+
+.bit-7 {
+  width: 58.33333%;
+}
+
+.bit-8 {
+  width: 66.66667%;
+}
+
+.bit-9 {
+  width: 75%;
+}
+
+.bit-10 {
+   width: 83.33333%;
+}
+
+.bit-11 {
+  width: 91.66667%;
+}
+//.bit-12 is redundant, since column has width: 100% value.
