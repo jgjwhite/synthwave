@@ -485,13 +485,6 @@ td {
   margin: 0;
   padding: 0; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-  display: inline-block;
-  vertical-align: middle; }
-
 body {
   padding: 0;
   margin: 0;
@@ -500,7 +493,7 @@ body {
   background-color: #232323;
   color: #fafafa;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 1em; }
+  font-size: 100%; }
 
 html {
   box-sizing: border-box; }
@@ -515,6 +508,13 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
 h1 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -523,7 +523,9 @@ h1 {
 h2 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1.2em; }
+  font-size: 2.25em;
+  /* 36px / 16px = 2.25em */
+  padding: 2.25rem 0 1rem; }
 
 h3 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
