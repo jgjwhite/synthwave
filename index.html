@@ -21,6 +21,7 @@ Last Updated September 21, 2016
 
     <!-- fonts go here -->
     <link rel="stylesheet" type="text/css" href="style/MyFontsWebfontsKit.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,7 +33,7 @@ Last Updated September 21, 2016
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- stylesheets used -->
-    <link rel="stylesheet" href="style/all.css"><!-- TODO change to SCSS -->
+    <link rel="stylesheet" href="style/all.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -93,48 +94,107 @@ Last Updated September 21, 2016
 
 
   <!-- ======================   NEWS & MEDIA   =========================== -->
-      <div id="news-media" class="container"><!-- news section container -->
+      <div class="row news"><!-- news section container -->
 
-              <h2>News &amp; Media</h2>
+              <h2 class="column">News &amp; Media</h2>
 
               <!-- #1 Visual Artist of the Week Card -->
-              <div class="placeholder-card"><!-- card containers -->
-                      <img src="#" alt="#" />
-                      <h3>Visual Artist of the Week</h3>
-                      <p>James White is a Canadian graphic designer and illustrator, and his award winning
-                      studio SignalNoise has produced works for a variety of clients including Nike, MTV and Google.</p>
+              <div class="bit-4 column"><!-- card containers -->
 
-                      <div class="link-date">
-                              <a href="#">http://signalnoise.com</a>
-                              <p>20160917</p>
+                  <div class="news-card">
+                      <!--image container -->
+                      <div class="img-card">
+                          <div class="content">
+                              <a href="http://signalnoise.com/" target="blank"><img src="../synthwave/img/test-neo.jpg" alt="SignalNoise" /></a>
+                          </div>
                       </div>
+
+
+                      <div class="text">
+
+                              <h3>Visual Artist of the Week</h3>
+
+                              <div class="limit">
+                                    <p>James White is a Canadian graphic designer and illustrator, and his award winning
+                                    studio SignalNoise has produced works for a variety of clients including Nike, MTV and Google.</p>
+                              </div>
+
+
+                              <div>
+                                      <div class="foot-link"><a href="http://signalnoise.com/" target="blank">SignalNoise.com</a></div>
+                                      <div class="foot-link right">20160917</div>
+                              </div>
+                      </div>
+
+                  </div><!-- close news card -->
+
               </div>
+
+
+
+
 
               <!-- #2 Simpsons & Steve Cutts Card -->
-              <div class="placeholder-card"><!-- card containers -->
-                      <img src="#" alt="#" />
-                      <h3>Simpsons + Steve Cutts</h3>
-                      <p>See the Simpsons couch gag inspired by the synthwave genre that pits Homer as Joe 'Kaz' Kazinsky versus Ned
-                      Flanders as 'Fernando Whitmore' in LA-Z Rider, animated by Steve Cutts.</p>
+              <div class="bit-4 column"><!-- card containers -->
+                  <div class="news-card">
 
-                      <div class="link-date">
-                              <a href="#">LA-Z Rider YouTube</a>
-                              <p>20160901</p>
+
+                      <!--image container -->
+                      <div class="img-card">
+                          <div class="content">
+                              <a href="https://www.youtube.com/watch?v=kZu5iDTtNg0" target="blank"><img src="../synthwave/img/simpsons-1.jpg" alt="Simpsons" /></a>
+                          </div>
                       </div>
+
+                      <div class="text">
+
+                            <h3>Simpsons + Steve Cutts</h3>
+
+                            <div class="limit">
+                                  <p>See the Simpsons couch gag inspired by the synthwave genre that pits Homer as Joe 'Kaz' Kazinsky versus Ned
+                                  Flanders as 'Fernando Whitmore' in LA-Z Rider, animated by Steve Cutts.</p>
+                            </div>
+
+
+                              <div>
+                                      <div class="foot-link"><a href="https://www.youtube.com/watch?v=kZu5iDTtNg0" target="blank">LA-Z Rider, YouTube</a></div>
+                                      <div class="foot-link right">20160901</div>
+                              </div>
+
+                          </div>
+                    </div><!-- close news card -->
               </div>
 
-              <!-- #1 Visual Artist of the Week Card -->
-              <div class="placeholder-card"><!-- card containers -->
-                      <img src="#" alt="#" />
-                      <h3>Download Mobile App</h3>
-                      <p>Get the Outrunners Festival Mobile App for artist stage times and line-ups, connect with staff and friends
-                      and contests now.</p>
+              <!-- DRIVE RADIO -->
+              <div class="bit-4 column"><!-- card containers -->
+                  <div class="news-card">
 
-                      <div class="link-date">
-                              <a href="#">DRIVE Radio</a>
-                              <p>20160826</p>
+
+                      <!--image container -->
+                      <div class="img-card">
+                          <div class="content">
+                              <a href="http://driveradio.be/" target="blank"><img src="../synthwave/img/drive-radio.jpg" alt="Drive Radio" /></a>
+                          </div>
                       </div>
-              </div>
+
+                      <div class="text">
+
+                          <h3>DRIVE Radio</h3>
+
+
+                          <div class="limit">
+                                <p>Get the Outrunners Festival Mobile App for artist stage times and line-ups, connect with staff and friends
+                                and contests now.</p><!-- TODO Change Copy Here -->
+                          </div>
+
+                          <div >
+                                  <div class="foot-link"><a href="http://driveradio.be/" target="blank">DRIVE Radio</a></div>
+                                  <div class="foot-link right">20160826</div>
+
+                          </div>
+                      </div>
+                    </div><!-- close news card -->
+            </div>
 
       </div><!-- end news section -->
 
@@ -169,8 +229,16 @@ Last Updated September 21, 2016
         </div><!-- close line-up container -->
 
 
+  <!-- ======================   Festival Info  =========================== -->
 
 
+
+
+  <!-- ======================   Connect  =========================== -->
+
+
+
+  <!-- ======================  Footer    =========================== -->
 
 
 </div><!-- end id=page -->

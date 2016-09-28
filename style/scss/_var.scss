@@ -9,5 +9,32 @@ $neon-green: rgba(102,255,178,1);
 $fore-light: rgba(250,250,250,1);
 
 //font stacks
-$body-font: Native-Regular, Arial, Helvetica, sans-serif;
+$body-font: 'Roboto', Arial, Helvetica, sans-serif;
 $display-font:  Native-Regular, Arial, Helvetica, sans-serif;
+
+
+//aspect ratio mixin https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+//Apply mixin to parent class.
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//Box Shadow mixin-
+@mixin shadow {
+  -webkit-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.6);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 5px -1px rgba(0,0,0,0.6);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 5px -1px rgba(0,0,0,0.6);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
