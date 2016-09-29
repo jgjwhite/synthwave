@@ -1,11 +1,10 @@
 <!--
-\
-/$$$$$$$  /$$$$$$   /$$$$$$$  /$$$$$$        /$$$$$$   /$$ /$$$$$$/$$$$   /$$$$$$
-/$$_____/ /$$__  $$ /$$__  $$ /$$__  $$      |_  $$_/  | $$| $$_  $$_  $$ /$$__  $$
-| $$      | $$  \ $$| $$  | $$| $$$$$$$$        | $$    | $$| $$ \ $$ \ $$| $$$$$$$$
-| $$      | $$  | $$| $$  | $$| $$_____/        | $$ /$$| $$| $$ | $$ | $$| $$_____/
-|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$        |  $$$$/| $$| $$ | $$ | $$|  $$$$$$$
-\_______/ \______/  \_______/ \_______/         \___/  |__/|__/ |__/ |__/ \_______/
+    ____        __
+   / __ \__  __/ /________  ______  ____  ___  __________
+ / / / / / / / __/ ___/ / / / __ \/ __ \/ _ \/ ___/ ___/
+/ /_/ / /_/ / /_/ /  / /_/ / / / / / / /  __/ /  (__  )
+\____/\__,_/\__/_/   \__,_/_/ /_/_/ /_/\___/_/  /____/
+
 
 Interactivity II Project #1
 Justin White
@@ -15,6 +14,19 @@ Last Updated September 21, 2016
 -->
 <!doctype html>
 <html class="no-js" lang="">
+
+<!--
+Running list;
+
+*** improve CSS organization.
+
+* convert menu to hamburger (never done before)
+* Design logo responsiveness with actual logo. img or svg?
+* format banner text
+* Add CTA to banner
+* Format artists into grid (look at masonry grid?)
+
+-->
 
 
 <head>
@@ -44,22 +56,15 @@ Last Updated September 21, 2016
 <div id="page"><!-- contain entire page -->
 
 
-
-
-
-
-
-
-
-
   <!-- ======================   HEADER   =========================== -->
-    <div class="row column header">
-          <div class="row column bit-12">
-                  <div class="row column bit-3">
-                      <div class="logo"></div>
+    <div class="row column header"><!-- hero wrapper -->
 
-                  </div>
-                  <div class="row column bit-3 menu">
+          <div class="row column nav-bar"><!-- NAV container -->
+
+            <!-- small 1/12(12), medium, large 1/9(12) -->
+                  <div class="logo"></div>
+
+                  <div class="menu bit-3"><!-- bit-3 = 25% -->
                       <ul>
                         <li><a href="#">News &amp; Media</a></li>
                         <li><a href="#">Artists</a></li>
@@ -70,14 +75,14 @@ Last Updated September 21, 2016
 
           </div><!-- close nav tag -->
 
-          <h1>The Outrunners</h1>
-          <h5>The World's First Synthwave Music Festival</h3>
-          <div class="placeholder-btn">Buy Tickets</div>
+          <div class="row column display-text">
 
-          <div class="social-media-svg">
+                  <h1>The Outrunners</h1>
+                  <h3>The World's First Synthwave Music Festival</h3>
+                  <div class="btn bit-3"><h5>Buy Tickets</h5></div><!-- can the text dictate the sz of the button? -->
 
-          </div>
-
+                  <div class="social-media-svg"></div>
+          </div><!-- close display-text-->
 
     </div><!-- close hero section tag -->
 

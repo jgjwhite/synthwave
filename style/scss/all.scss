@@ -78,8 +78,8 @@ html {
 h1 {
     font-family: $display-font;
     font-weight: 700;
-    font-size: 2.6em;
-
+    font-size: 2.3em;
+    padding-bottom: 0.3em;
 }
 
 h2 {
@@ -93,7 +93,7 @@ h3 {
   font-family: $display-font;
   font-weight: 500;
   font-size: 1.2em;
-  padding: 2rem 0 0.5rem;
+  padding-bottom: 2em;
 }
 
 h4 {
@@ -116,38 +116,68 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   text-shadow: 2px 2px 5px $neon-pink;
 }
 
+.btn {
+  width: 155px;
+  height: 60px;
+  border: 2px solid $neon-pink;
+  color: $neon-pink;
+  font-size: 0.8em; //14px
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /* ========================================
 Specific Element Styles
 ========================================
 */
 
-//header container
-.header {
-  height: 100vh;
+/* --------------  Header ----------------- */
 
-}
+    //header container
+    .header {
+      height: 100vh;
 
-//Logo Placeholder
-.logo {
-  background-color: $neon-pink;
-  padding-bottom: 33%;
-}
+    }
+    .nav-bar {
+      margin-top: 42px;   //TODO Express heights in PX or EM?
+      margin-bottom: 24px;
+    }
 
-//menu formatting
-.menu {
-  padding-left: 1rem;
-  ul {
-    list-style-type: none;
-  }
-}
+    //Logo Placeholder
+    // do not full-scale; instead, change size for small screens only.
+    .logo {
+      width: 120px; //size on mobile
+      height: 40px;
+      background-color: $neon-pink;
+      float: left;
 
+      @media screen and (min-width: 40em) {
+        width: 240px; //height on tablet, desktop
+        height: 80px;
+      }
+    }
 
-/*
+    .menu {
+      float: right;
+      ul {
+        list-style-type: none;
+      }
 
-News & Media
+      /*
+      @media screen and (min-width:40em) {
+        width: 25%;
+      }*/
 
-*/
+    }
 
+    .display-text {
+      margin-top: 15vh;
+    }
+
+/* --------------  News & Media  ----------------- */
 
       //General Container
       .news {
