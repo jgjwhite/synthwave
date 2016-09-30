@@ -487,8 +487,10 @@ img {
 h1 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 2.3em;
-  padding-bottom: 0.3em; }
+  font-size: 2em; }
+  @media screen and (min-width: 40em) {
+    h1 {
+      font-size: 3.75em; } }
 
 h2 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
@@ -500,8 +502,17 @@ h2 {
 h3 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-bottom: 2em; }
+
+h4 {
+  font-family: Native-Regular, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.25em;
+  padding-bottom: 2em; }
+  @media screen and (min-width: 40em) {
+    h4 {
+      font-size: 1.5em; } }
 
 h5 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
@@ -525,6 +536,10 @@ a:hover {
   align-items: center;
   justify-content: center; }
 
+.full-wrap {
+  margin-left: 0;
+  margin-right: 0; }
+
 /* ========================================
 Specific Element Styles
 ========================================
@@ -547,14 +562,36 @@ Specific Element Styles
       width: 240px;
       height: 80px; } }
 
-.menu {
-  float: right;
-  /*
-  @media screen and (min-width:40em) {
+.menu ul {
+  display: none;
+  list-style-type: none; }
+.menu .menu-mobile {
+  float: right; }
+.menu #hamburger {
+  cursor: help;
+  padding: 10px 35px 16px 0; }
+  .menu #hamburger span, .menu #hamburger span:before, .menu #hamburger span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: ''; }
+  .menu #hamburger span:before {
+    top: -10px; }
+  .menu #hamburger span:after {
+    bottom: -10px; }
+@media screen and (min-width: 40em) {
+  .menu {
     width: 25%;
-  }*/ }
-  .menu ul {
-    list-style-type: none; }
+    float: right; }
+    .menu ul {
+      display: block;
+      list-style-type: none; }
+    .menu .menu-mobile {
+      display: none; } }
 
 .display-text {
   margin-top: 15vh; }
@@ -605,6 +642,16 @@ Specific Element Styles
     float: left; }
   .text .right {
     text-align: right; }
+
+/* --------------  Artist Line-up  ----------------- */
+.h-m84 {
+  background-color: pink; }
+
+.h-out {
+  background-color: lime; }
+
+.h-kaz {
+  background-color: cyan; }
 
 /* ========================================
 Media Queries

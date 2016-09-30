@@ -78,8 +78,12 @@ html {
 h1 {
     font-family: $display-font;
     font-weight: 700;
-    font-size: 2.3em;
-    padding-bottom: 0.3em;
+    font-size: 2em;
+
+    //tablet, desktop size
+    @media screen and (min-width: 40em) {
+      font-size: 3.75em; //60px / 16px = 3.75em
+    }
 }
 
 h2 {
@@ -92,12 +96,20 @@ h2 {
 h3 {
   font-family: $display-font;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-bottom: 2em;
 }
 
 h4 {
+  font-family: $display-font;
+  font-weight: 500;
+  font-size: 1.25em;
+  padding-bottom: 2em;
 
+  //desktop, tablet size
+  @media screen and (min-width: 40em) {
+    font-size: 1.5em; //24px / 16px = 1.5em
+  }
 }
 
 h5 {
@@ -126,6 +138,11 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.full-wrap { //override .row margins, maintain max-width
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
@@ -161,15 +178,46 @@ Specific Element Styles
     }
 
     .menu {
-      float: right;
-      ul {
-        list-style-type: none;
-      }
+                ul {
+                  display: none;
+                  list-style-type: none;
+                }
+                .menu-mobile {
+                  float: right;
+                }
+                #hamburger {
+                  cursor: help;
+                  padding: 10px 35px 16px 0;
 
-      /*
-      @media screen and (min-width:40em) {
-        width: 25%;
-      }*/
+                  span, span:before, span:after {
+                    cursor: pointer;
+                    border-radius: 1px;
+                    height: 5px;
+                    width: 35px;
+                    background: white;
+                    position: absolute;
+                    display: block;
+                    content: '';
+                  }
+                  span:before {
+                    top: -10px; //TODO how does this work? what is the before/after crap?
+                  }
+                  span:after {
+                    bottom: -10px;
+                  }
+                }
+
+                //For tablet, desktop, show menu.
+                @media screen and (min-width:40em) {
+                          width: 25%;
+                          float: right;
+
+                          ul {
+                            display: block;
+                            list-style-type: none;
+                          }
+                          .menu-mobile { display: none; }
+                      }
 
     }
 
@@ -234,6 +282,13 @@ Specific Element Styles
         }
       }
 
+
+
+/* --------------  Artist Line-up  ----------------- */
+
+.h-m84 { background-color: pink;  }
+.h-out { background-color: lime; }
+.h-kaz { background-color: cyan; }
 
 
 
