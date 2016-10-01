@@ -385,6 +385,13 @@ th {
   .column, .columns {
     padding-left: 0.9rem;
     padding-right: 0.9rem; } }
+.flex {
+  display: flex;
+  justify-content: center; }
+
+.spacer {
+  margin-bottom: 25px; }
+
 /*
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: right; }
@@ -395,21 +402,27 @@ th {
 /*
 .bit-1 {
   width: 8.333%; }
-
-.bit-2 {
-    width: 16.66667%; }
 */
+.bit-2 {
+  width: 16.66667%; }
+
 .bit-3 {
   width: 25%;
   float: left; }
+
+.bit-1-2-2 {
+  width: 100%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-1-2-2 {
+      width: 50%; } }
 
 .bit-1-3-3 {
   width: 100%;
   float: left; }
   @media screen and (min-width: 40em) {
     .bit-1-3-3 {
-      width: 33.33333%;
-      float: left; } }
+      width: 33.33333%; } }
 
 .bit-2-4-6 {
   width: 50%;
@@ -442,6 +455,13 @@ th {
     .bit-1-2R-2R {
       width: 58.33333%;
       padding-left: 25px; } }
+
+.bit-8-6 {
+  width: 66.66667%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-8-6 {
+      width: 50%; } }
 
 .bit-6 {
   width: 50%;
@@ -570,12 +590,26 @@ a:hover {
   align-items: center;
   justify-content: center; }
 
+.square-ratio {
+  position: relative; }
+  .square-ratio:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%; }
+  .square-ratio > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
 /* ========================================
 Specific Element Styles
 ========================================
 */
 /* --------------  Header ----------------- */
-.header {
+#header {
   height: 100vh; }
 
 .nav-bar {
@@ -627,7 +661,7 @@ Specific Element Styles
   margin-top: 15vh; }
 
 /* --------------  News & Media  ----------------- */
-.news {
+#news {
   margin-bottom: 60px; }
 
 .news-card {
@@ -746,14 +780,11 @@ Specific Element Styles
 
 #map {
   width: 100%;
-  height: 400px;
+  height: 300px;
   float: left;
   margin-bottom: 80px; }
 
-.spacer {
-  margin-bottom: 25px; }
-
-.rules {
+#rules {
   width: 100%;
   margin-top: 40px;
   margin-bottom: 40px; }
@@ -773,6 +804,38 @@ Specific Element Styles
     width: 100%;
     padding-top: 33.33333%; }
   .rules-style > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+/* --------------  Connect   ----------------- */
+#connect {
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 0px;
+  border-bottom: 1px solid #414141;
+  outline: none; }
+
+/* --------------   Footer   -------------------- */
+footer {
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
+.logo-foot {
+  background-color: magenta;
+  position: relative; }
+  .logo-foot:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 33.33333%; }
+  .logo-foot > .content {
     position: absolute;
     top: 0;
     left: 0;

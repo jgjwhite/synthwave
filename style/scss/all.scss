@@ -140,7 +140,9 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   justify-content: center;
 }
 
-
+.square-ratio {
+  @include aspect-ratio(1,1);
+}
 
 
 
@@ -152,7 +154,7 @@ Specific Element Styles
 /* --------------  Header ----------------- */
 
     //header container
-    .header {
+    #header {
       height: 100vh;
 
     }
@@ -225,12 +227,10 @@ Specific Element Styles
 
 /* --------------  News & Media  ----------------- */
 
-      //General Container
-      .news {
+      #news {
         margin-bottom: 60px;
       }
 
-      //3x cards
       .news-card { //mobile setting
         background-color: $bkgd-medium;
         padding: 0;
@@ -284,78 +284,100 @@ Specific Element Styles
 
 /* --------------  Artist Line-up  ----------------- */
 
-#line-up {
-  margin-top: 40px;
-  margin-bottom: 80px;
-}
+      #line-up { //TODO DRY the section wrappers ...
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
 
-.aspect {
-    @include aspect-ratio(4,3);
-}
+      .aspect {
+          @include aspect-ratio(4,3);
+      }
 
-.h-m84 { background-color: pink; }
-.h-out { background-color: lime; }
-.h-kaz { background-color: cyan; }
-.h-lzh { background-color: aliceblue; }
-.h-cts { background-color: lavender; }
-.h-col { background-color: grey; }
-.h-dyn { background-color: purple; }
-.h-ats { background-color: red; }
-.h-btm { background-color: blue; }
+      .h-m84 { background-color: pink; }
+      .h-out { background-color: lime; }
+      .h-kaz { background-color: cyan; }
+      .h-lzh { background-color: aliceblue; }
+      .h-cts { background-color: lavender; }
+      .h-col { background-color: grey; }
+      .h-dyn { background-color: purple; }
+      .h-ats { background-color: red; }
+      .h-btm { background-color: blue; }
 
-.h-mdr { background-color: green; }
-.h-mid { background-color: brown; }
-.h-gun { background-color: lightblue; }
+      .h-mdr { background-color: green; }
+      .h-mid { background-color: brown; }
+      .h-gun { background-color: lightblue; }
 
-.h-f84 { background-color: white; }
-.h-cbr { background-color: black; }
-.h-fls { background-color: orange; }
+      .h-f84 { background-color: white; }
+      .h-cbr { background-color: black; }
+      .h-fls { background-color: orange; }
 
 
 
 /* --------------  Festival Info  ----------------- */
 
-#info {
-  margin-top: 40px;
-}
+      #info {
+        margin-top: 40px;
+      }
+
+      #location {
+        margin-top: 60px;
+      }
+
+      #map {
+        width: 100%;
+        height: 300px;
+        float: left;
+        margin-bottom: 80px;
+
+      }
+
+      //TODO clean up baseline here ..
+      #rules {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      .rules-style {
+        margin-bottom: 25px;
+
+        border: 4px solid $neon-cyan;
+        color: $neon-cyan;
+        font-size: 1.2em; //14px
+
+        @include aspect-ratio(3,1); //TODO improve text centering ...
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
 
-#location {
-  margin-top: 60px;
-}
+/* --------------  Connect   ----------------- */
 
-//TODO clean up scroll UX on map .. methods to roll over without
-//getting caught up in map?
-#map {
-  width: 100%;
-  height: 400px;
-  float: left;
-  margin-bottom: 80px;
-  //@include aspect-ratio(3,1);
-  //background-color: $bkgd-medium;
-}
+      #connect {
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
 
-//TODO clean up baseline here ..
-.spacer {
-  margin-bottom: 25px;
-}
+      input { //TODO does input need browser support?
+        width: 100%;
+        margin-bottom: 20px;
 
-.rules {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+        border: 0px;
+        border-bottom: 1px solid $bkgd-medium;
+        outline: none;
+      }
 
-.rules-style {
-  margin-bottom: 25px;
 
-  border: 4px solid $neon-cyan;
-  color: $neon-cyan;
-  font-size: 1.2em; //14px
+/* --------------   Footer   -------------------- */
 
-  @include aspect-ratio(3,1); //TODO improve text centering ...
+      footer {
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      .logo-foot {
+          background-color: $neon-pink;
+          @include aspect-ratio(3,1);
+      }

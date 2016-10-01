@@ -32,6 +32,7 @@ Last Updated September 21, 2016
 
           <!-- stylesheets used -->
           <link rel="stylesheet" href="style/all.css">
+          <link href="webfonts/ss-social-circle.css" rel="stylesheet" /><!-- icon set https://symbolset.com/ -->
 
           <script src="js/vendor/modernizr-2.8.3.min.js"></script>
       </head>
@@ -41,7 +42,7 @@ Last Updated September 21, 2016
 <body>
 
   <!-- ======================   HEADER   =========================== -->
-    <div class="row header"><!-- hero wrapper -->
+    <div id="header" class="row"><!-- hero wrapper -->
 
           <div class="row column nav-bar"><!-- NAV container -->
 
@@ -78,23 +79,27 @@ Last Updated September 21, 2016
 
 
 <!--
-   ____  ___ _      _______   ____ ___  ___  ____/ (_)___ _
-  / __ \/ _ \ | /| / / ___/  / __ `__ \/ _ \/ __  / / __ `/
- / / / /  __/ |/ |/ (__  )  / / / / / /  __/ /_/ / / /_/ /
-/_/ /_/\___/|__/|__/____/  /_/ /_/ /_/\___/\__,_/_/\__,_/
+
+
+#    # ###### #    #  ####     #    # ###### #####  #   ##
+##   # #      #    # #         ##  ## #      #    # #  #  #
+# #  # #####  #    #  ####     # ## # #####  #    # # #    #
+#  # # #      # ## #      #    #    # #      #    # # ######
+#   ## #      ##  ## #    #    #    # #      #    # # #    #
+#    # ###### #    #  ####     #    # ###### #####  # #    #
+
 
 -->
 
 
 
   <!-- ======================   NEWS & MEDIA   =========================== -->
-      <div class="row news"><!-- news section container -->
+      <div id="news" class="row"><!-- news section container -->
 
               <h2 class="column">News &amp; Media</h2>
 
               <!-- #1 Visual Artist of the Week Card -->
               <div class="bit-1-3-3 column"><!-- card containers -->
-
                   <div class="news-card">
                       <!--image container -->
                       <div class="img-ratio">
@@ -103,9 +108,7 @@ Last Updated September 21, 2016
                           </div>
                       </div>
 
-
                       <div class="text">
-
                               <h3>Visual Artist of the Week</h3>
 
                               <div class="limit">
@@ -113,25 +116,17 @@ Last Updated September 21, 2016
                                     studio SignalNoise has produced works for a variety of clients including Nike, MTV and Google.</p>
                               </div>
 
-
                               <div>
                                       <div class="foot-link"><a href="http://signalnoise.com/" target="blank">SignalNoise.com</a></div>
                                       <div class="foot-link right">20160917</div>
                               </div>
                       </div>
-
                   </div><!-- close news card -->
-
               </div>
-
-
-
-
 
               <!-- #2 Simpsons & Steve Cutts Card -->
               <div class="bit-1-3-3 column"><!-- card containers -->
                   <div class="news-card">
-
 
                       <!--image container -->
                       <div class="img-card">
@@ -141,14 +136,12 @@ Last Updated September 21, 2016
                       </div>
 
                       <div class="text">
-
                             <h3>Simpsons + Steve Cutts</h3>
 
                             <div class="limit">
                                   <p>See the Simpsons couch gag inspired by the synthwave genre that pits Homer as Joe 'Kaz' Kazinsky versus Ned
                                   Flanders as 'Fernando Whitmore' in LA-Z Rider, animated by Steve Cutts.</p>
                             </div>
-
 
                               <div>
                                       <div class="foot-link"><a href="https://www.youtube.com/watch?v=kZu5iDTtNg0" target="blank">LA-Z Rider, YouTube</a></div>
@@ -162,8 +155,6 @@ Last Updated September 21, 2016
               <!-- DRIVE RADIO -->
               <div class="bit-1-3-3 column"><!-- card containers -->
                   <div class="news-card">
-
-
                       <!--image container -->
                       <div class="img-card">
                           <div class="content">
@@ -172,15 +163,11 @@ Last Updated September 21, 2016
                       </div>
 
                       <div class="text">
-
                           <h3>DRIVE Radio</h3>
-
-
                           <div class="limit">
                                 <p>Get the Outrunners Festival Mobile App for artist stage times and line-ups, connect with staff and friends
                                 and contests now.</p>
                           </div>
-
                           <div >
                                   <div class="foot-link"><a href="http://driveradio.be/" target="blank">DRIVE Radio</a></div>
                                   <div class="foot-link right">20160826</div>
@@ -195,14 +182,14 @@ Last Updated September 21, 2016
 
 
 <!--
-      _     _
-     | |   (_)
-     | |    _ _ __   ___ ______ _   _ _ __
-     | |   | | '_ \ / _ \______| | | | '_ \
-     | |___| | | | |  __/      | |_| | |_) |
-     \_____/_|_| |_|\___|       \__,_| .__/
-                                     | |
-                                     |_|
+
+#      # #    # ######       #    # #####
+#      # ##   # #            #    # #    #
+#      # # #  # #####  ##### #    # #    #
+#      # #  # # #            #    # #####
+#      # #   ## #            #    # #
+###### # #    # ######        ####  #
+                                 |_|
 -->
 
 
@@ -238,19 +225,13 @@ Last Updated September 21, 2016
 <!--
 
 
-                   ___           ___           ___
-       ___        /\__\         /\  \         /\  \
-     /\  \      /::|  |       /::\  \       /::\  \
-     \:\  \    /:|:|  |      /:/\:\  \     /:/\:\  \
-    /::\__\  /:/|:|  |__   /::\~\:\  \   /:/  \:\  \
- __/:/\/__/ /:/ |:| /\__\ /:/\:\ \:\__\ /:/__/ \:\__\
-/\/:/  /    \/__|:|/:/  / \/__\:\ \/__/ \:\  \ /:/  /
-\::/__/         |:/:/  /       \:\__\    \:\  /:/  /
- \:\__\         |::/  /         \/__/     \:\/:/  /
-  \/__/         /:/  /                     \::/  /
-                \/__/                       \/__/
 
-
+# #    # ######  ####
+# ##   # #      #    #
+# # #  # #####  #    #
+# #  # # #      #    #
+# #   ## #      #    #
+# #    # #       ####
 
 
 -->
@@ -308,50 +289,107 @@ Last Updated September 21, 2016
         </div>
 </div>
 
-<div class="rules spacer row">
+<div id="rules" class="row">
     <h2 class="column">Rules</h2>
 
-    <div class="rules">
-
+    <div>
           <div class="column bit-2-3-3"><div class="rules-style">General</div></div>
           <div class="column bit-2-3-3"><div class="rules-style">Disability Access</div></div>
           <div class="column bit-2-3-3"><div class="rules-style">Tickets</div></div>
 
-
-
           <div class="column bit-2-3-3"><div class="rules-style">Alcohol &amp; Drugs</div></div>
           <div class="column bit-2-3-3"><div class="rules-style">Parking</div></div>
           <div class="column bit-2-3-3"><div class="rules-style">More</div></div>
-
     </div>
 
     <div class="column">
           <div class="btn bit-3"><h5>Buy Tickets</h5></div>
     </div>
-
-
 </div>
+
+<!--
+ ######   #######  ##    ## ##    ## ########  ######  ########
+##    ## ##     ## ###   ## ###   ## ##       ##    ##    ##
+##       ##     ## ####  ## ####  ## ##       ##          ##
+##       ##     ## ## ## ## ## ## ## ######   ##          ##
+##       ##     ## ##  #### ##  #### ##       ##          ##
+##    ## ##     ## ##   ### ##   ### ##       ##    ##    ##
+ ######   #######  ##    ## ##    ## ########  ######     ##
+
+
+--->
 
 
   <!-- ======================   Connect  =========================== -->
 
+<div id="connect" class="row">
+    <h2 class="column">Connect</h2>
+
+    <div class="column">
+        <p>For updates, news and announcements, sign up to our newsletter below</p>
+
+        <div class="bit-1-2-2">
+                <h3>Name</h3>
+                <input type="text" name="FirstName" maxlength="60" placeholder="First Name" />
+                <input type="text" name="LastName" maxlength="60" placeholder="Last Name" />
+        </div>
+
+        <div class="bit-1-2-2">
+                <h3>Email</h3>
+                <input type="text" name="email" maxlength="120" placeholder="Email" />
+        </div>
+    </div>
+
+    <div class="column">
+      <div class="bit-1-2-2">
+              <h3>City</h3>
+              <input type="text" name="city" maxlength="120" placeholder="City" />
+              <input type="text" name="country" maxlength="120" placeholder="Country" />
+      </div>
+    </div>
+
+    <div class="column">
+            <div class="btn bit-3"><h5>Submit</h5></div>
+    </div>
+
+</div>
 
 
   <!-- ======================  Footer    =========================== -->
 
+<footer class="row">
+    <div class="column flex spacer">
+          <div class="bit-8-6 logo-foot"></div>
+    </div>
 
-</div><!-- end id=page -->
+    <div class="column flex"><h3>Partners</h3></div>
+
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-1.jpg" alt="sponsor" /></div></div></div>
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-2.jpg" alt="sponsor" /></div></div></div>
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-3.jpg" alt="sponsor" /></div></div></div>
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-4.jpg" alt="sponsor" /></div></div></div>
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-5.jpg" alt="sponsor" /></div></div></div>
+    <div class="column bit-2 spacer"><div class="square-ratio"><div class="content"><img src="../synthwave/img/sponsors/test-6.jpg" alt="sponsor" /></div></div></div>
+
+    <div class="column flex spacer">
+          <div class="bit-8-6"><!-- TODO either ditch symbolset or figure how to scale .. -->
+              <div class="bit-3 ss-twitter"></div>
+              <div class="bit-3 ss-facebook"></div>
+              <div class="bit-3 ss-instagram"></div>
+              <div class="bit-3 ss-youtube"></div>
+
+          </div>
+    </div>
+
+    <div class="column flex spacer">
+        <p>c. Twenty Sixteen, Outrunners Music Festival</p>
+    </div>
 
 
-
-
-
+</footer>
 
 
 <!-- ========================    JS Scripts   ===========================  -->
-
-
-
 
         <script>
 

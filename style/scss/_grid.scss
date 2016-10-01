@@ -39,6 +39,17 @@
       padding-left: 0.9rem; //increase padding
       padding-right: 0.9rem; } }
 
+//Layout Tweaking
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    .spacer {
+      margin-bottom: 25px;
+    }
+
 /*
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: right; }
@@ -52,10 +63,12 @@
 /*
 .bit-1 {
   width: 8.333%; }
+*/
 
+//partners
 .bit-2 {
     width: 16.66667%; }
-*/
+
 
 //used by btn
 .bit-3 {
@@ -66,13 +79,22 @@
 
 //Active Grid Sections
 
+.bit-1-2-2 {
+  width: 100%; //mobile
+  float: left;
+
+  @media screen and (min-width: 40em) {
+    width: 50%;
+  }
+}
+
+
 .bit-1-3-3 { //titled based on responsive reflow (mobile-tablet-desktop)
     width: 100%; //mobile, single row
     float: left;
 
     @media screen and (min-width: 40em) { //tablet, desktop, 3 per row
       width: 33.33333%;
-      float: left;
     }
 
 }
@@ -117,14 +139,21 @@
   }
 }
 
+.bit-8-6 { //referring to 12-col grid
+  width: 66.66667%; //mobile
+  float: left;
+
+  @media screen and (min-width: 40em) {
+    width: 50%;
+  }
+}
+
 //outstanding grid items ..
 
 .bit-6 {
   width: 50%;
   float: left;
 }
-
-
 
 .bit-5 {
     width: 41.66667%;
