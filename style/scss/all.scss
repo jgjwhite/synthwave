@@ -140,10 +140,8 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   justify-content: center;
 }
 
-.full-wrap { //override .row margins, maintain max-width
-  margin-left: 0;
-  margin-right: 0;
-}
+
+
 
 
 /* ========================================
@@ -245,7 +243,7 @@ Specific Element Styles
       }
 
       //images
-      .img-card {
+      .img-ratio {
         @include aspect-ratio(4, 3);
 
         img {
@@ -286,39 +284,78 @@ Specific Element Styles
 
 /* --------------  Artist Line-up  ----------------- */
 
-.h-m84 { background-color: pink;  }
+#line-up {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.aspect {
+    @include aspect-ratio(4,3);
+}
+
+.h-m84 { background-color: pink; }
 .h-out { background-color: lime; }
 .h-kaz { background-color: cyan; }
+.h-lzh { background-color: aliceblue; }
+.h-cts { background-color: lavender; }
+.h-col { background-color: grey; }
+.h-dyn { background-color: purple; }
+.h-ats { background-color: red; }
+.h-btm { background-color: blue; }
+
+.h-mdr { background-color: green; }
+.h-mid { background-color: brown; }
+.h-gun { background-color: lightblue; }
+
+.h-f84 { background-color: white; }
+.h-cbr { background-color: black; }
+.h-fls { background-color: orange; }
 
 
 
+/* --------------  Festival Info  ----------------- */
 
-
-/* ========================================
-Media Queries
-========================================
-*/
-
-// Using em's to distinguish breakpoints per https://zellwk.com/blog/media-query-units/
-// Not a big deal, however used Foundation 6 as influence
-// Breakpoints: 0 - 640px - 1024px - 1200;
-
-//TODO how to structure media queries right? stack all changes into group, or as part of classes?
-
-@media screen and (min-width: 40em) { /* 480px and above */
-  body {
-    font-size: 90%;
-  }
+#info {
+  margin-top: 40px;
 }
 
-@media screen and (min-width: 64em) { /* 880 px and above */
-  body {
-    font-size: 95%;
-  }
+
+#location {
+  margin-top: 60px;
 }
 
-@media screen and (min-width: 75em) { /* 1200px and above */
-  body {
-    font-size: 100%;
-  }
+//TODO clean up scroll UX on map .. methods to roll over without
+//getting caught up in map?
+#map {
+  width: 100%;
+  height: 400px;
+  float: left;
+  margin-bottom: 80px;
+  //@include aspect-ratio(3,1);
+  //background-color: $bkgd-medium;
+}
+
+//TODO clean up baseline here ..
+.spacer {
+  margin-bottom: 25px;
+}
+
+.rules {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.rules-style {
+  margin-bottom: 25px;
+
+  border: 4px solid $neon-cyan;
+  color: $neon-cyan;
+  font-size: 1.2em; //14px
+
+  @include aspect-ratio(3,1); //TODO improve text centering ...
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

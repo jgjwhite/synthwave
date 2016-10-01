@@ -356,10 +356,13 @@ td,
 th {
   padding: 0; }
 
+/*
 #page {
   padding-left: 1.8rem;
-  padding-right: 1.8rem; }
+  padding-right: 1.8rem;
 
+}
+*/
 .row {
   max-width: 75rem;
   margin-left: auto;
@@ -382,18 +385,20 @@ th {
   .column, .columns {
     padding-left: 0.9rem;
     padding-right: 0.9rem; } }
-.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
-  float: right; }
+/*
+  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: right; }
 
-.column.end:last-child:last-child, .end.columns:last-child:last-child {
-  float: left; }
-
+  .column.end:last-child:last-child, .end.columns:last-child:last-child {
+    float: left; }
+*/
+/*
 .bit-1 {
   width: 8.333%; }
 
 .bit-2 {
-  width: 16.66667%; }
-
+    width: 16.66667%; }
+*/
 .bit-3 {
   width: 25%;
   float: left; }
@@ -406,6 +411,38 @@ th {
       width: 33.33333%;
       float: left; } }
 
+.bit-2-4-6 {
+  width: 50%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-2-4-6 {
+      width: 25%; } }
+  @media screen and (min-width: 55em) {
+    .bit-2-4-6 {
+      width: 16.66667%; } }
+
+.bit-2-3-3 {
+  width: 50%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-2-3-3 {
+      width: 33.33333%; } }
+
+.bit-1-2L-2L {
+  width: 100%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-1-2L-2L {
+      width: 41.66667%; } }
+
+.bit-1-2R-2R {
+  width: 100%;
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .bit-1-2R-2R {
+      width: 58.33333%;
+      padding-left: 25px; } }
+
 .bit-6 {
   width: 50%;
   float: left; }
@@ -413,21 +450,18 @@ th {
 .bit-5 {
   width: 41.66667%; }
 
-.bit-7 {
-  width: 58.33333%; }
-
-.bit-8 {
-  width: 66.66667%; }
-
-.bit-9 {
-  width: 75%; }
-
-.bit-10 {
-  width: 83.33333%; }
-
-.bit-11 {
-  width: 91.66667%; }
-
+@media screen and (min-width: 40em) {
+  /* 480px and above */
+  body {
+    font-size: 90%; } }
+@media screen and (min-width: 64em) {
+  /* 880 px and above */
+  body {
+    font-size: 95%; } }
+@media screen and (min-width: 75em) {
+  /* 1200px and above */
+  body {
+    font-size: 100%; } }
 /* ========================================
 Global Styles
 ========================================
@@ -536,10 +570,6 @@ a:hover {
   align-items: center;
   justify-content: center; }
 
-.full-wrap {
-  margin-left: 0;
-  margin-right: 0; }
-
 /* ========================================
 Specific Element Styles
 ========================================
@@ -609,20 +639,20 @@ Specific Element Styles
   -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6);
   box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.6); }
 
-.img-card {
+.img-ratio {
   position: relative; }
-  .img-card:before {
+  .img-ratio:before {
     display: block;
     content: "";
     width: 100%;
     padding-top: 75%; }
-  .img-card > .content {
+  .img-ratio > .content {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0; }
-  .img-card img {
+  .img-ratio img {
     max-width: 100%;
     display: block;
     height: auto; }
@@ -644,6 +674,24 @@ Specific Element Styles
     text-align: right; }
 
 /* --------------  Artist Line-up  ----------------- */
+#line-up {
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
+.aspect {
+  position: relative; }
+  .aspect:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 75%; }
+  .aspect > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
 .h-m84 {
   background-color: pink; }
 
@@ -653,21 +701,82 @@ Specific Element Styles
 .h-kaz {
   background-color: cyan; }
 
-/* ========================================
-Media Queries
-========================================
-*/
-@media screen and (min-width: 40em) {
-  /* 480px and above */
-  body {
-    font-size: 90%; } }
-@media screen and (min-width: 64em) {
-  /* 880 px and above */
-  body {
-    font-size: 95%; } }
-@media screen and (min-width: 75em) {
-  /* 1200px and above */
-  body {
-    font-size: 100%; } }
+.h-lzh {
+  background-color: aliceblue; }
+
+.h-cts {
+  background-color: lavender; }
+
+.h-col {
+  background-color: grey; }
+
+.h-dyn {
+  background-color: purple; }
+
+.h-ats {
+  background-color: red; }
+
+.h-btm {
+  background-color: blue; }
+
+.h-mdr {
+  background-color: green; }
+
+.h-mid {
+  background-color: brown; }
+
+.h-gun {
+  background-color: lightblue; }
+
+.h-f84 {
+  background-color: white; }
+
+.h-cbr {
+  background-color: black; }
+
+.h-fls {
+  background-color: orange; }
+
+/* --------------  Festival Info  ----------------- */
+#info {
+  margin-top: 40px; }
+
+#location {
+  margin-top: 60px; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  float: left;
+  margin-bottom: 80px; }
+
+.spacer {
+  margin-bottom: 25px; }
+
+.rules {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.rules-style {
+  margin-bottom: 25px;
+  border: 4px solid cyan;
+  color: cyan;
+  font-size: 1.2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .rules-style:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 33.33333%; }
+  .rules-style > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
 
 /*# sourceMappingURL=all.css.map */
