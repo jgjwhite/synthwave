@@ -584,11 +584,23 @@ a:hover {
   width: 155px;
   height: 60px;
   border: 2px solid magenta;
+  background-color: #000;
   color: magenta;
   font-size: 0.8em;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.btn:before {
+  width: 155px;
+  height: 60px;
+  background-color: magenta;
+  content: "pink drop shadow";
+  position: absolute;
+  top: 0.625em;
+  left: -0.625em;
+  z-index: -1; }
 
 .square-ratio {
   position: relative; }
@@ -610,7 +622,23 @@ Specific Element Styles
 */
 /* --------------  Header ----------------- */
 #header {
-  height: 100vh; }
+  height: 100vh;
+  position: relative;
+  background-color: #000 !important; }
+  #header video {
+    position: relative;
+    z-index: 0;
+    visibility: visible;
+    height: 100%;
+    width: auto;
+    display: flex;
+    margin: 0 auto; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
 
 .nav-bar {
   margin-top: 42px;

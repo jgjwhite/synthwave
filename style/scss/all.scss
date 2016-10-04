@@ -128,16 +128,35 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   text-shadow: 2px 2px 5px $neon-pink;
 }
 
+
+//general button class
 .btn {
   width: 155px;
   height: 60px;
   border: 2px solid $neon-pink;
+  background-color: #000;
   color: $neon-pink;
   font-size: 0.8em; //14px
+
+  position: absolute;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn:before {
+  width: 155px;
+  height: 60px;
+  background-color: $neon-pink;
+
+  content: "pink drop shadow";
+
+  position: absolute;
+  top: 0.625em;
+  left: -0.625em;
+
+  z-index: -1;
 }
 
 .square-ratio {
@@ -156,8 +175,31 @@ Specific Element Styles
     //header container
     #header {
       height: 100vh;
+      position: relative;
+      background-color: #000 !important;
 
+        video {
+            position: relative;
+            z-index: 0;
+            visibility: visible;
+            height: 100%;
+            width: auto;
+
+            display: flex;
+            margin: 0 auto;
+        }
     }
+
+
+//Element Overlay
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
     .nav-bar {
       margin-top: 42px;   //TODO Express heights in PX or EM?
       margin-bottom: 24px;
