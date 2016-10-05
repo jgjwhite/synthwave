@@ -356,13 +356,6 @@ td,
 th {
   padding: 0; }
 
-/*
-#page {
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
-
-}
-*/
 .row {
   max-width: 75rem;
   margin-left: auto;
@@ -392,17 +385,6 @@ th {
 .spacer {
   margin-bottom: 25px; }
 
-/*
-  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
-    float: right; }
-
-  .column.end:last-child:last-child, .end.columns:last-child:last-child {
-    float: left; }
-*/
-/*
-.bit-1 {
-  width: 8.333%; }
-*/
 .bit-2 {
   width: 16.66667%; }
 
@@ -453,8 +435,7 @@ th {
   float: left; }
   @media screen and (min-width: 40em) {
     .bit-1-2R-2R {
-      width: 58.33333%;
-      padding-left: 25px; } }
+      width: 58.33333%; } }
 
 .bit-8-6 {
   width: 66.66667%;
@@ -513,7 +494,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #232323;
+  background-color: black;
   color: #fafafa;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 100%; }
@@ -548,7 +529,6 @@ h1 {
 
 h2 {
   font-family: Native-Regular, Arial, Helvetica, sans-serif;
-  font-weight: 400;
   font-size: 2.25em;
   /* 36px / 16px = 2.25em */
   padding: 2.25rem 0 1rem; }
@@ -654,36 +634,36 @@ Specific Element Styles
       width: 240px;
       height: 80px; } }
 
-.menu ul {
-  display: none;
-  list-style-type: none; }
-.menu .menu-mobile {
+.menu {
+  position: relative;
   float: right; }
-.menu #hamburger {
-  cursor: help;
-  padding: 10px 35px 16px 0; }
-  .menu #hamburger span, .menu #hamburger span:before, .menu #hamburger span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: white;
-    position: absolute;
-    display: block;
-    content: ''; }
-  .menu #hamburger span:before {
-    top: -10px; }
-  .menu #hamburger span:after {
-    bottom: -10px; }
-@media screen and (min-width: 40em) {
-  .menu {
-    width: 25%;
-    float: right; }
-    .menu ul {
+  .menu ul {
+    display: none;
+    list-style-type: none; }
+  .menu #hamburger {
+    cursor: help;
+    padding: 10px 35px 16px 0; }
+    .menu #hamburger span, .menu #hamburger span:before, .menu #hamburger span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: magenta;
+      border-radius: 1em;
+      position: absolute;
       display: block;
-      list-style-type: none; }
-    .menu .menu-mobile {
-      display: none; } }
+      content: ''; }
+    .menu #hamburger span:before {
+      top: -10px; }
+    .menu #hamburger span:after {
+      bottom: -10px; }
+  @media screen and (min-width: 40em) {
+    .menu {
+      width: 25%;
+      float: right; }
+      .menu ul {
+        display: block;
+        list-style-type: none; } }
 
 .display-text {
   margin-top: 15vh; }
@@ -693,7 +673,7 @@ Specific Element Styles
   margin-bottom: 60px; }
 
 .news-card {
-  background-color: #414141;
+  background-color: #232323;
   padding: 0;
   padding-bottom: 40px;
   margin-bottom: 60px;
@@ -822,21 +802,16 @@ Specific Element Styles
   border: 4px solid cyan;
   color: cyan;
   font-size: 1.2em;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .rules-style:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 33.33333%; }
-  .rules-style > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+  justify-content: center;
+  text-align: center;
+  height: 75px; }
+  @media screen and (min-width: 40em) {
+    .rules-style {
+      height: 125px; } }
+  .rules-style h3 {
+    padding-bottom: 0; }
 
 /* --------------  Connect   ----------------- */
 #connect {
@@ -847,7 +822,7 @@ input {
   width: 100%;
   margin-bottom: 20px;
   border: 0px;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #232323;
   outline: none; }
 
 /* --------------   Footer   -------------------- */

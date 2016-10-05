@@ -59,13 +59,21 @@ Last Updated September 21, 2016
                           <div class="logo"></div>
 
                           <div class="menu"><!-- bit-3 = 25% -->
-                            <div class="menu-mobile"><a id="hamburger" href="#"><span></span></a></div>
-                              <ul>
-                                <li><a href="#">News &amp; Media</a></li>
-                                <li><a href="#">Artists</a></li>
-                                <li><a href="#">Festival Info</a></li>
-                                <li><a href="#">Connect</a></li>
-                              </ul>
+
+                                  <ul>
+                                    <li><a href="#news">News &amp; Media</a></li>
+                                    <li><a href="#line-up">Artists</a></li>
+                                    <li><a href="#info">Festival Info</a></li>
+                                    <li><a href="#connect">Connect</a></li>
+                                  </ul>
+
+                                  <div id="hamburger">
+                                      <span></span>
+                                  </div>
+
+                                  <!-- legacy code -->
+                              <!--div class="menu-mobile"><a id="hamburger" href="#"><span></span></a></div-->
+
                           </div>
 
                   </div><!-- close nav tag -->
@@ -244,13 +252,13 @@ Last Updated September 21, 2016
   <!-- ======================   Festival Info  =========================== -->
 
 <div id="info" class="row">
-      <h2>Festival Info</h2>
+      <h2 class="column">Festival Info</h2>
 
-      <div class="bit-1-2L-2L">
+      <div class="column bit-1-2L-2L">
             <h3>Enter the World of Synthwave</h3>
       </div>
 
-      <div class="bit-1-2R-2R">
+      <div class="column bit-1-2R-2R">
             <p>For newcomers, Synth wave is a style of music that fits into the neon-noir
               style that came out of the 1980’s and has seen a revival as of late through
               various forms of media.  The Outrunners music festival celebrates this culture,
@@ -262,9 +270,8 @@ Last Updated September 21, 2016
 
 </div>
 
-<div id="location" class="row">
+<div id="location" class="row column">
     <h3>Location</h3>
-
 
 </div>
 
@@ -297,16 +304,16 @@ Last Updated September 21, 2016
     <h2 class="column">Rules</h2>
 
     <div>
-          <div class="column bit-2-3-3"><div class="rules-style">General</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Disability Access</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Tickets</div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>General</h3></div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>Disability Access</h3></div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>Tickets</h3></div></div>
 
-          <div class="column bit-2-3-3"><div class="rules-style">Alcohol &amp; Drugs</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Parking</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">More</div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>Alcohol &amp; Drugs</h3></div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>Parking</h3></div></div>
+          <div class="column bit-2-3-3"><div class="rules-style"><h3>More</h3></div></div>
     </div>
 
-    <div class="column">
+    <div class="column spacer">
           <div class="btn bit-3"><h5>Buy Tickets</h5></div>
     </div>
 </div>
@@ -395,12 +402,14 @@ Last Updated September 21, 2016
 
 <!-- ========================    JS Scripts   ===========================  -->
 
+        <!-- google maps script -->
         <script>
 
               function initMap() {
                 var miami = {lat: 25.777073, lng: -80.1896337};
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 15,
+                  scrollwheel: 0,
                   center: miami
                 });
                 var marker = new google.maps.Marker({
@@ -413,6 +422,36 @@ Last Updated September 21, 2016
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFzGpd0-8kni1-9fRo2PVM4yBNsqwNKGY&callback=initMap">
         </script>
+
+
+        <!-- hamburger menu script -->
+        <script>
+
+              document.getElementById('hamburger').addEventListener('click', checkNav);
+              window.addEventListener("keyup", function(e) {
+                if (e.keyCode == 27) closeNav(); //on key "escape", run function close Nav
+              }, false);
+
+              function checkNav() {
+                if (document.body.classList.contains('active')) {
+                  closeNav();
+                } else {
+                  openNav();
+                }
+              }
+
+              function closeNav() {
+                document.body.classList.remove('active');
+              }
+
+              function openNav() {
+                document.body.classList.add('active');
+              }
+      </script>
+
+
+
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 

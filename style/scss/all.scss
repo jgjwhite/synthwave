@@ -11,7 +11,8 @@
 //all variables: color, type, etc.
 @import 'var';
 
-
+//all interactivity
+@import 'interactive';
 
 /* ========================================
 Global Styles
@@ -88,7 +89,6 @@ h1 {
 
 h2 {
   font-family: $display-font;
-  font-weight: 400;
   font-size: 2.25em; /* 36px / 16px = 2.25em */
   padding: 2.25rem 0 1rem;
 }
@@ -130,6 +130,7 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
 
 
 //general button class
+//Adapted CSS button concept from http://www.bloomberg.com/
 .btn {
   width: 155px;
   height: 60px;
@@ -201,7 +202,7 @@ Specific Element Styles
     }
 
     .nav-bar {
-      margin-top: 42px;   //TODO Express heights in PX or EM?
+      margin-top: 42px;
       margin-bottom: 24px;
     }
 
@@ -219,49 +220,51 @@ Specific Element Styles
       }
     }
 
-    .menu {
-                ul {
-                  display: none;
-                  list-style-type: none;
-                }
-                .menu-mobile {
-                  float: right;
-                }
-                #hamburger {
-                  cursor: help;
-                  padding: 10px 35px 16px 0;
+    .menu { //mobile
+        position: relative;
+        float: right;
 
-                  span, span:before, span:after {
-                    cursor: pointer;
-                    border-radius: 1px;
-                    height: 5px;
-                    width: 35px;
-                    background: white;
-                    position: absolute;
-                    display: block;
-                    content: '';
-                  }
-                  span:before {
-                    top: -10px; //TODO how does this work? what is the before/after crap?
-                  }
-                  span:after {
-                    bottom: -10px;
-                  }
-                }
+            ul {
+              display: none;
+              list-style-type: none;
+            }
+            #hamburger {
+                      cursor: help;
+                      padding: 10px 35px 16px 0;
 
-                //For tablet, desktop, show menu.
-                @media screen and (min-width:40em) {
-                          width: 25%;
-                          float: right;
-
-                          ul {
-                            display: block;
-                            list-style-type: none;
-                          }
-                          .menu-mobile { display: none; }
+                      span, span:before, span:after {
+                        cursor: pointer;
+                        border-radius: 1px;
+                        height: 5px;
+                        width: 35px;
+                        background: $neon-pink;
+                        border-radius: 1em;
+                        position: absolute;
+                        display: block;
+                        content: '';
                       }
+                      span:before {
+                        top: -10px; //TODO how does this work? what is the before/after crap?
+                      }
+                      span:after {
+                        bottom: -10px;
+                      }
+              }
 
+                //desktop, tablet
+                @media screen and (min-width:40em) {
+                  width: 25%;
+                  float: right;
+
+                  ul {
+                    display: block;
+                    list-style-type: none;
+                  }
+                }
     }
+
+
+
 
     .display-text {
       margin-top: 15vh;
@@ -370,8 +373,8 @@ Specific Element Styles
         height: 300px;
         float: left;
         margin-bottom: 80px;
-
       }
+
 
       //TODO clean up baseline here ..
       #rules {
@@ -387,11 +390,21 @@ Specific Element Styles
         color: $neon-cyan;
         font-size: 1.2em; //14px
 
-        @include aspect-ratio(3,1); //TODO improve text centering ...
+        //@include aspect-ratio(3,1); //TODO improve text centering ...
 
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+
+        height: 75px;
+        @media screen and (min-width: 40em) {
+          height: 125px;
+        }
+
+        h3 {
+          padding-bottom: 0;
+        }
       }
 
 
