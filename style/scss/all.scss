@@ -76,7 +76,7 @@ html {
     vertical-align: middle; }
 
 h1 {
-    font-family: $display-font;
+    font-family: 'Press Start 2P', sans-serif;
     font-weight: 700;
     font-size: 2em;
 
@@ -88,7 +88,6 @@ h1 {
 
 h2 {
   font-family: $display-font;
-  font-weight: 400;
   font-size: 2.25em; /* 36px / 16px = 2.25em */
   padding: 2.25rem 0 1rem;
 }
@@ -112,7 +111,7 @@ h4 {
   }
 }
 
-h5 {
+h5 { //used for buttons
   font-family: $display-font;
   font-weight: 300;
   font-size: 1.4em;
@@ -140,11 +139,6 @@ a:hover { //TODO change to mixin, add to interaction layer (aggregate interactio
   justify-content: center;
 }
 
-.square-ratio {
-  @include aspect-ratio(1,1);
-}
-
-
 
 /* ========================================
 Specific Element Styles
@@ -157,6 +151,15 @@ Specific Element Styles
     #header {
       height: 100vh;
 
+      //gradient bkgd
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bf26bc+0,232323+100 */
+      background: #bf26bc; /* Old browsers */
+      background: -moz-linear-gradient(top,  #bf26bc 0%, #232323 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #bf26bc 0%,#232323 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #bf26bc 0%,#232323 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf26bc', endColorstr='#232323',GradientType=0 ); /* IE6-9 */
+
+
     }
     .nav-bar {
       margin-top: 42px;   //TODO Express heights in PX or EM?
@@ -166,14 +169,16 @@ Specific Element Styles
     //Logo Placeholder
     // do not full-scale; instead, change size for small screens only.
     .logo {
-      width: 120px; //size on mobile
-      height: 40px;
-      background-color: $neon-pink;
+      width: 120px; //size on mobile -- aspect(3,1)
+      height: auto;
       float: left;
 
+        svg {
+          width: 100%;
+        }
       @media screen and (min-width: 40em) {
-        width: 240px; //height on tablet, desktop
-        height: 80px;
+        width: 180px; //height on tablet, desktop
+
       }
     }
 
@@ -287,13 +292,28 @@ Specific Element Styles
       #line-up { //TODO DRY the section wrappers ...
         margin-top: 40px;
         margin-bottom: 80px;
+
+        svg {
+          height: 100%;
+          width: auto;
+          padding: 5%;
+
+        }
       }
 
       .aspect {
           @include aspect-ratio(4,3);
       }
 
-      .h-m84 { background-color: pink; }
+      .h-m84 {
+        background-color: $black;
+        
+        display: flex;
+        justify-content: center;
+      }
+
+
+
       .h-out { background-color: lime; }
       .h-kaz { background-color: cyan; }
       .h-lzh { background-color: aliceblue; }
@@ -360,7 +380,7 @@ Specific Element Styles
         margin-bottom: 80px;
       }
 
-      input { //TODO does input need browser support?
+      input {
         width: 100%;
         margin-bottom: 20px;
 
@@ -375,9 +395,19 @@ Specific Element Styles
       footer {
         margin-top: 40px;
         margin-bottom: 80px;
-      }
+
+              svg {
+                width: 100%;
+                height: auto;
+                color: $neon-pink;
+              }
+        }
 
       .logo-foot {
           background-color: $neon-pink;
           @include aspect-ratio(3,1);
+      }
+
+      .social-icons {
+        max-width: 60px; //mobile max width
       }

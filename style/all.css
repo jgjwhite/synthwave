@@ -515,7 +515,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #232323;
   color: #fafafa;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Native-Regular", Arial, Helvetica, sans-serif;
   font-size: 100%; }
 
 html {
@@ -539,7 +539,7 @@ img {
   vertical-align: middle; }
 
 h1 {
-  font-family: Native-Regular, Arial, Helvetica, sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
   font-weight: 700;
   font-size: 2em; }
   @media screen and (min-width: 40em) {
@@ -547,20 +547,19 @@ h1 {
       font-size: 3.75em; } }
 
 h2 {
-  font-family: Native-Regular, Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-size: 2.25em;
   /* 36px / 16px = 2.25em */
   padding: 2.25rem 0 1rem; }
 
 h3 {
-  font-family: Native-Regular, Arial, Helvetica, sans-serif;
+  font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 500;
   font-size: 1.4em;
   padding-bottom: 2em; }
 
 h4 {
-  font-family: Native-Regular, Arial, Helvetica, sans-serif;
+  font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 500;
   font-size: 1.25em;
   padding-bottom: 2em; }
@@ -569,7 +568,7 @@ h4 {
       font-size: 1.5em; } }
 
 h5 {
-  font-family: Native-Regular, Arial, Helvetica, sans-serif;
+  font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 300;
   font-size: 1.4em; }
 
@@ -590,27 +589,24 @@ a:hover {
   align-items: center;
   justify-content: center; }
 
-.square-ratio {
-  position: relative; }
-  .square-ratio:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 100%; }
-  .square-ratio > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-
 /* ========================================
 Specific Element Styles
 ========================================
 */
 /* --------------  Header ----------------- */
 #header {
-  height: 100vh; }
+  height: 100vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bf26bc+0,232323+100 */
+  background: #bf26bc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #bf26bc 0%, #232323 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #bf26bc 0%, #232323 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #bf26bc 0%, #232323 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf26bc', endColorstr='#232323',GradientType=0 );
+  /* IE6-9 */ }
 
 .nav-bar {
   margin-top: 42px;
@@ -618,13 +614,13 @@ Specific Element Styles
 
 .logo {
   width: 120px;
-  height: 40px;
-  background-color: magenta;
+  height: auto;
   float: left; }
+  .logo svg {
+    width: 100%; }
   @media screen and (min-width: 40em) {
     .logo {
-      width: 240px;
-      height: 80px; } }
+      width: 180px; } }
 
 .menu ul {
   display: none;
@@ -711,6 +707,10 @@ Specific Element Styles
 #line-up {
   margin-top: 40px;
   margin-bottom: 80px; }
+  #line-up svg {
+    height: 100%;
+    width: auto;
+    padding: 5%; }
 
 .aspect {
   position: relative; }
@@ -727,7 +727,9 @@ Specific Element Styles
     bottom: 0; }
 
 .h-m84 {
-  background-color: pink; }
+  background-color: black;
+  display: flex;
+  justify-content: center; }
 
 .h-out {
   background-color: lime; }
@@ -826,6 +828,10 @@ input {
 footer {
   margin-top: 40px;
   margin-bottom: 80px; }
+  footer svg {
+    width: 100%;
+    height: auto;
+    color: magenta; }
 
 .logo-foot {
   background-color: magenta;
@@ -841,5 +847,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0; }
+
+.social-icons {
+  max-width: 60px; }
 
 /*# sourceMappingURL=all.css.map */
