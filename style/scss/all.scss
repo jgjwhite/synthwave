@@ -305,31 +305,11 @@ Specific Element Styles
           @include aspect-ratio(4,3);
       }
 
-      .h-m84 {
-        background-color: $black;
-        
+      .mount {
+        background-color: $bkgd-dark;
         display: flex;
         justify-content: center;
       }
-
-
-
-      .h-out { background-color: lime; }
-      .h-kaz { background-color: cyan; }
-      .h-lzh { background-color: aliceblue; }
-      .h-cts { background-color: lavender; }
-      .h-col { background-color: grey; }
-      .h-dyn { background-color: purple; }
-      .h-ats { background-color: red; }
-      .h-btm { background-color: blue; }
-
-      .h-mdr { background-color: green; }
-      .h-mid { background-color: brown; }
-      .h-gun { background-color: lightblue; }
-
-      .h-f84 { background-color: white; }
-      .h-cbr { background-color: black; }
-      .h-fls { background-color: orange; }
 
 
 
