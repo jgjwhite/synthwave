@@ -1,0 +1,23 @@
+//all interactivity here
+
+
+//All Hover
+
+a:hover {
+  text-shadow: 2px 2px 5px $neon-pink;
+}
+
+
+.btn:hover {
+    //translate mixin (stack)
+    transform: translate(-0.35em, 0.35em);
+    transform-style: preserve-3d;
+
+    cursor: pointer;
+    background-color: $neon-pink;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn:hover:before {
+  transform: translate3d(0.35rem, -0.35rem, -1em);
+}

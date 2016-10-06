@@ -45,7 +45,8 @@ Last Updated September 21, 2016
     <div id="header"><!-- hero wrapper -->
         <div class="row">
 
-                  <div class="row column nav-bar"><!-- NAV container -->
+
+                  <div class="column nav-bar"><!-- NAV container -->
 
                     <!-- small 1/12(12), medium, large 1/9(12) -->
                           <div class="logo">
@@ -97,7 +98,7 @@ Last Updated September 21, 2016
                   </div><!-- close nav tag -->
 
                 <!-- HEADER TEXT -->
-                  <div class="row column display-text">
+                  <div class="column display-text">
 
                           <h1>The Outrunners</h1>
                           <h4>The World's First Synthwave Music Festival</h4>
@@ -109,9 +110,9 @@ Last Updated September 21, 2016
 
                           <div class="social-media-svg"></div>
                   </div><!-- close display-text-->
-        </div>
-    </div><!-- close hero section tag -->
 
+        </div><!-- close hero section tag -->
+    </div>
 
 
 
@@ -135,7 +136,9 @@ Last Updated September 21, 2016
   <!-- ======================   NEWS & MEDIA   =========================== -->
       <div id="news" class="row"><!-- news section container -->
 
-              <h2 class="column">News &amp; Media</h2>
+        <div class="column">
+              <h2>News &amp; Media</h2>
+        </div>
 
               <!-- #1 Visual Artist of the Week Card -->
               <div class="bit-1-3-3 column"><!-- card containers -->
@@ -237,9 +240,11 @@ Last Updated September 21, 2016
 
         <div id="line-up" class="row"><!-- line-up container -->
 
-            <h2 class="column">Artist Line-up</h2>
+            <div class="column">
+                  <h2>Artist Line-up</h2>
+            </div>
 
-                <div class="bit-1-2-2 aspect">
+                <div class="bit-1-2-2 aspect"><!-- full bleed -->
                   <div class="content mount">
                         <a href="#">
 
@@ -405,7 +410,10 @@ Last Updated September 21, 2016
   <!-- ======================   Festival Info  =========================== -->
 
 <div id="info" class="row">
-      <h2 class="column">Festival Info</h2>
+      <div class="column">
+          <h2>Festival Info</h2>
+      </div>
+
 
       <div class="column bit-1-2L-2L">
             <h3>Enter the World of Synthwave</h3>
@@ -423,9 +431,13 @@ Last Updated September 21, 2016
 
 </div>
 
-<div id="location" class="row column"><h2>Location</h2></div>
+    <div id="location" class="row">
+      <div class="column">
+            <h2>Location</h2>
+      </div>
+    </div>
 
-<div id="map"></div><!-- google map div -->
+    <div id="map"></div><!-- google map div -->
 
 
 <div class="row spacer">
@@ -450,16 +462,36 @@ Last Updated September 21, 2016
 </div>
 
 <div id="rules" class="row">
-    <h2 class="column">Rules</h2>
+  <div class="column">
+        <h2>Rules</h2>
+  </div>
 
+    <!-- rules buttons -->
     <div>
-          <div class="column bit-2-3-3"><div class="rules-style">General</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Disability Access</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Tickets</div></div>
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>General</h5></a></div>
+          </div>
 
-          <div class="column bit-2-3-3"><div class="rules-style">Alcohol &amp; Drugs</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">Parking</div></div>
-          <div class="column bit-2-3-3"><div class="rules-style">More</div></div>
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>Disability Access</h5></a></div>
+          </div>
+
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>Tickets</h5></a></div>
+          </div>
+
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>Alcohol</h5></a></div>
+          </div>
+
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>Parking</h5></a></div>
+          </div>
+
+          <div class="column bit-2-3-3">
+                <div class="content rules-style"><a href="#"><h5>More</h5></a></div>
+          </div>
+
     </div>
 
     <div class="column">
@@ -484,7 +516,9 @@ Last Updated September 21, 2016
   <!-- ======================   Connect  =========================== -->
 
 <div id="connect" class="row">
-    <h2 class="column">Connect</h2>
+  <div class="column">
+        <h2>Connect</h2>
+  </div>
 
     <div class="column">
         <p>For updates, news and announcements, sign up to our newsletter below</p>
@@ -501,13 +535,14 @@ Last Updated September 21, 2016
         </div>
     </div>
 
-    <div class="column">
+    <div class="column spacer">
       <div class="bit-1-2-2">
               <h3>City</h3>
               <input type="text" name="city" maxlength="120" placeholder="City" />
               <input type="text" name="country" maxlength="120" placeholder="Country" />
       </div>
     </div>
+
 
     <div class="column">
             <div class="btn bit-3"><h5>Submit</h5></div>
@@ -518,71 +553,74 @@ Last Updated September 21, 2016
 
   <!-- ======================  Footer    =========================== -->
 
-<footer class="row">
+<footer>
+  <div class="row">
     <div class="column flex spacer"><!-- footer logo -->
+      <!-- small 1/12(12), medium, large 1/9(12) -->
 
-              <?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 349 349.7" style="enable-background:new 0 0 349 349.7;" xml:space="preserve">
-              <style type="text/css">
-                .st0{fill:url(#SVGID_1_);} .st1{fill:url(#SVGID_2_);} .st2{fill:url(#SVGID_3_);} .st3{fill:url(#SVGID_4_);} .st4{fill:url(#SVGID_5_);} .st5{fill:url(#SVGID_6_);} .st6{fill:url(#SVGID_7_);} .st7{fill:#FF00FF;}
-                .st8{fill:#FF00FF;stroke:#FF00FF;stroke-miterlimit:10;} .st9{display:none;}
-              </style>
+              <!-- the svg optimizer didn't work for this batch -->
 
-              <g id="Layer_1">
-                <g>
-                  <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.5225" y1="158.8269" x2="347.4591" y2="158.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st0" d="M344.9,144.8H4.1c-1.6,9-2.5,19-2.6,28h345.9C347.3,163.8,346.4,153.8,344.9,144.8z"/>
-                  <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1.6625" y1="195.8269" x2="347.3191" y2="195.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st1" d="M4.7,208.8h339.5c1.7-8,2.7-17,3.1-26H1.7C2,191.8,3.1,200.8,4.7,208.8z"/>
-                  <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="51.3592" y1="304.8269" x2="297.6224" y2="304.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st2" d="M69.1,312.8h210.8c6.3-5,12.2-10,17.7-16H51.4C56.9,302.8,62.8,307.8,69.1,312.8z"/>
-                  <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="102.125" y1="340.7412" x2="246.8566" y2="340.7412"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st3" d="M174.5,348.7c25.8,0,50.3-5.8,72.4-15.8H102.1C124.1,342.8,148.7,348.7,174.5,348.7z"/>
-                  <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="23.5147" y1="269.3269" x2="325.4669" y2="269.3269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st4" d="M35.9,278.8h277.3c4.5-6,8.6-12,12.3-19h-302C27.2,266.8,31.3,272.8,35.9,278.8z"/>
-                  <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="5.7256" y1="69.4135" x2="343.256" y2="69.4135"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st5" d="M174.5,2C92.1,2,23.1,59.8,5.7,136.8h337.5C325.9,59.8,256.9,2,174.5,2z"/>
-                  <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="7.5512" y1="232.3269" x2="341.4304" y2="232.3269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
-                  <path class="st6" d="M15.6,243.8h317.8c3.2-7,5.9-15,8-23H7.6C9.7,228.8,12.4,236.8,15.6,243.8z"/>
-                </g>
-              </g>
+                      <?xml version="1.0" encoding="utf-8"?>
+                      <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 349 349.7" style="enable-background:new 0 0 349 349.7;" xml:space="preserve">
+                      <style type="text/css">
+                        .st0{fill:url(#SVGID_1_);} .st1{fill:url(#SVGID_2_);} .st2{fill:url(#SVGID_3_);} .st3{fill:url(#SVGID_4_);} .st4{fill:url(#SVGID_5_);} .st5{fill:url(#SVGID_6_);} .st6{fill:url(#SVGID_7_);} .st7{fill:#FF00FF;}
+                        .st8{fill:#FF00FF;stroke:#FF00FF;stroke-miterlimit:10;} .st9{display:none;}
+                      </style>
 
-              </svg>
+                      <g id="Layer_1">
+                        <g>
+                          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.5225" y1="158.8269" x2="347.4591" y2="158.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st0" d="M344.9,144.8H4.1c-1.6,9-2.5,19-2.6,28h345.9C347.3,163.8,346.4,153.8,344.9,144.8z"/>
+                          <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1.6625" y1="195.8269" x2="347.3191" y2="195.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st1" d="M4.7,208.8h339.5c1.7-8,2.7-17,3.1-26H1.7C2,191.8,3.1,200.8,4.7,208.8z"/>
+                          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="51.3592" y1="304.8269" x2="297.6224" y2="304.8269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st2" d="M69.1,312.8h210.8c6.3-5,12.2-10,17.7-16H51.4C56.9,302.8,62.8,307.8,69.1,312.8z"/>
+                          <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="102.125" y1="340.7412" x2="246.8566" y2="340.7412"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st3" d="M174.5,348.7c25.8,0,50.3-5.8,72.4-15.8H102.1C124.1,342.8,148.7,348.7,174.5,348.7z"/>
+                          <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="23.5147" y1="269.3269" x2="325.4669" y2="269.3269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st4" d="M35.9,278.8h277.3c4.5-6,8.6-12,12.3-19h-302C27.2,266.8,31.3,272.8,35.9,278.8z"/>
+                          <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="5.7256" y1="69.4135" x2="343.256" y2="69.4135"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st5" d="M174.5,2C92.1,2,23.1,59.8,5.7,136.8h337.5C325.9,59.8,256.9,2,174.5,2z"/>
+                          <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="7.5512" y1="232.3269" x2="341.4304" y2="232.3269"><stop  offset="0" style="stop-color:#F15A24"/><stop  offset="1" style="stop-color:#FCEE21"/></linearGradient>
+                          <path class="st6" d="M15.6,243.8h317.8c3.2-7,5.9-15,8-23H7.6C9.7,228.8,12.4,236.8,15.6,243.8z"/>
+                        </g>
+                      </g>
+
+                      </svg>
 
     </div>
 
 
-    <!-- social media icons -->
-    <div class="column flex spacer">
-              <div class="column bit-2 social-icons"><!-- twitter -->
-                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" stroke="magenta" fill="magenta" viewBox="0 0 430.1 430.1"><path d="M381.4 198.6c24.2-2 40.5-13 46.8-27.9 -8.7 5.4-35.8 11.2-50.7 5.6 -0.7-3.5-1.5-6.8-2.4-9.9 -11.4-41.8-50.4-75.5-91.2-71.4 3.3-1.3 6.7-2.6 10-3.7 4.5-1.6 30.9-5.9 26.7-15.2 -3.5-8.2-35.7 6.2-41.8 8.1 8-3 21.3-8.2 22.7-17.4 -12.3 1.7-24.3 7.5-33.6 15.9 3.4-3.6 5.9-8 6.5-12.8C241.7 91 222.6 133.1 207.1 174c-12.1-11.8-22.9-21-32.6-26.2 -27.1-14.5-59.5-29.7-110.4-48.6 -1.6 16.8 8.3 39.2 36.8 54.1 -6.2-0.8-17.5 1-26.5 3.2 3.7 19.3 15.7 35.2 48.2 42.8 -14.8 1-22.5 4.4-29.5 11.6 6.8 13.4 23.3 29.2 53 25.9 -33 14.2-13.5 40.6 13.4 36.6C113.7 320.9 41.5 317.4 0 277.8c108.3 147.6 343.7 87.3 378.8-54.9 26.3 0.2 41.7-9.1 51.3-19.4C415 206.1 393 203.5 381.4 198.6z"/></svg></a>
-              </div>
 
-              <div class="column bit-2 social-icons"><!-- facebook -->
-                <!-- source http://www.flaticon.com/search?word=instagram&search-type=icons -->
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="magenta" fill="magenta" viewBox="0 0 90 90"><path d="M90 15C90 7.1 82.9 0 75 0H15C7.1 0 0 7.1 0 15v60C0 82.9 7.1 90 15 90H45V56H34V41h11v-5.8C45 25.1 52.6 16 61.9 16H74v15H61.9C60.5 31 59 32.6 59 35V41h15v15H59v34h16c7.9 0 15-7.1 15-15V15z"/></svg></a>
-              </div>
+        <div class="column flex foot-title">c. Twenty Sixteen</div>
+        <div class="column flex">Outrunners Music Festival</div>
 
-              <div class="column bit-2 social-icons"><!-- youtube -->
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="magenta" fill="magenta" viewBox="0 0 90 90"><path d="M90 27C90 19.5 84 13.5 76.6 13.5h-63.1C6 13.5 0 19.5 0 27v36.1C0 70.5 6 76.5 13.5 76.5h63.1C84 76.5 90 70.5 90 63V27zM36 60.2V26.3l25.7 16.9L36 60.2z"/></svg></a>
-              </div>
+        <!-- social media icons -->
+        <div class="column social-wrap">
+                  <div class="social-icons"><!-- twitter -->
+                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" stroke="white" fill="white" viewBox="0 0 430.1 430.1"><path d="M381.4 198.6c24.2-2 40.5-13 46.8-27.9 -8.7 5.4-35.8 11.2-50.7 5.6 -0.7-3.5-1.5-6.8-2.4-9.9 -11.4-41.8-50.4-75.5-91.2-71.4 3.3-1.3 6.7-2.6 10-3.7 4.5-1.6 30.9-5.9 26.7-15.2 -3.5-8.2-35.7 6.2-41.8 8.1 8-3 21.3-8.2 22.7-17.4 -12.3 1.7-24.3 7.5-33.6 15.9 3.4-3.6 5.9-8 6.5-12.8C241.7 91 222.6 133.1 207.1 174c-12.1-11.8-22.9-21-32.6-26.2 -27.1-14.5-59.5-29.7-110.4-48.6 -1.6 16.8 8.3 39.2 36.8 54.1 -6.2-0.8-17.5 1-26.5 3.2 3.7 19.3 15.7 35.2 48.2 42.8 -14.8 1-22.5 4.4-29.5 11.6 6.8 13.4 23.3 29.2 53 25.9 -33 14.2-13.5 40.6 13.4 36.6C113.7 320.9 41.5 317.4 0 277.8c108.3 147.6 343.7 87.3 378.8-54.9 26.3 0.2 41.7-9.1 51.3-19.4C415 206.1 393 203.5 381.4 198.6z"/></svg></a>
+                  </div>
 
-              <div class="column bit-2 social-icons"><!-- soundcloud -->
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="magenta" fill="magenta" viewBox="0 0 90 90"><path d="M0 54c0 3 1.4 5.8 3.6 7.6V46.4C1.4 48.3 0 51 0 54M7.3 44.4v19.2C8.2 63.9 9.2 64 10.1 64h1V44.1c-0.3 0-0.6 0-1 0C9.2 44 8.2 44.2 7.3 44.4M15.7 45.7c-0.3-0.2-0.5-0.3-0.8-0.5V64h3.8V38.9C17.2 40.8 16.1 43.2 15.7 45.7M22.4 35.3V64h3.8V33.5C24.9 33.9 23.6 34.6 22.4 35.3M30 32.7V64h3.8V32.8c-0.8-0.1-1.6-0.2-2.4-0.2C30.9 32.7 30.4 32.7 30 32.7M39.6 34.9c-1.2-0.7-2.6-1.3-4-1.7V64h5.7V32.6C40.7 33.4 40.1 34.1 39.6 34.9M43.2 30.8V64h35.9v0C86.6 63.5 90 58.8 90 53.1c0-6-4.6-10.9-10.7-10.9 -1.6 0-2.9 0.3-4.2 0.9C74.1 33.5 65.9 26 55.9 26 51 26 46.6 27.8 43.2 30.8"/></svg></a>
-              </div>
+                  <div class="social-icons"><!-- facebook -->
+                    <!-- source http://www.flaticon.com/search?word=instagram&search-type=icons -->
+                          <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="white" fill="white" viewBox="0 0 90 90"><path d="M90 15C90 7.1 82.9 0 75 0H15C7.1 0 0 7.1 0 15v60C0 82.9 7.1 90 15 90H45V56H34V41h11v-5.8C45 25.1 52.6 16 61.9 16H74v15H61.9C60.5 31 59 32.6 59 35V41h15v15H59v34h16c7.9 0 15-7.1 15-15V15z"/></svg></a>
+                  </div>
 
-              <div class="column bit-2 social-icons"><!-- instagram -->
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="magenta" fill="magenta" viewBox="0 0 169.1 169.1"><path d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.8c0 25.7 20.9 46.7 46.7 46.7h75.8c25.7 0 46.7-20.9 46.7-46.7V46.7C169.1 20.9 148.1 0 122.4 0zM154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7C29.2 154.1 15 139.9 15 122.4V46.7C15 29.2 29.2 15 46.7 15h75.8c17.5 0 31.7 14.2 31.7 31.7V122.4z"/><path d="M84.5 41c-24 0-43.6 19.5-43.6 43.6 0 24 19.5 43.6 43.6 43.6s43.6-19.5 43.6-43.6C128.1 60.5 108.6 41 84.5 41zM84.5 113.1c-15.7 0-28.6-12.8-28.6-28.6 0-15.7 12.8-28.6 28.6-28.6s28.6 12.8 28.6 28.6C113.1 100.3 100.3 113.1 84.5 113.1z"/><path d="M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2 -2.1 2-3.2 4.9-3.2 7.8 0 2.9 1.2 5.7 3.2 7.8 2 2 4.9 3.2 7.8 3.2 2.9 0 5.7-1.2 7.8-3.2 2.1-2 3.2-4.9 3.2-7.8 0-2.9-1.2-5.7-3.2-7.8C135.7 29.4 132.8 28.3 129.9 28.3z"/></svg></a>
-              </div>
-    </div>
+                  <div class="social-icons"><!-- youtube -->
+                          <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="white" fill="white" viewBox="0 0 90 90"><path d="M90 27C90 19.5 84 13.5 76.6 13.5h-63.1C6 13.5 0 19.5 0 27v36.1C0 70.5 6 76.5 13.5 76.5h63.1C84 76.5 90 70.5 90 63V27zM36 60.2V26.3l25.7 16.9L36 60.2z"/></svg></a>
+                  </div>
 
-    <div class="column flex spacer">
-        <p>c. Twenty Sixteen, Outrunners Music Festival</p>
-    </div>
+                  <div class="social-icons"><!-- soundcloud -->
+                          <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="white" fill="white" viewBox="0 0 90 90"><path d="M0 54c0 3 1.4 5.8 3.6 7.6V46.4C1.4 48.3 0 51 0 54M7.3 44.4v19.2C8.2 63.9 9.2 64 10.1 64h1V44.1c-0.3 0-0.6 0-1 0C9.2 44 8.2 44.2 7.3 44.4M15.7 45.7c-0.3-0.2-0.5-0.3-0.8-0.5V64h3.8V38.9C17.2 40.8 16.1 43.2 15.7 45.7M22.4 35.3V64h3.8V33.5C24.9 33.9 23.6 34.6 22.4 35.3M30 32.7V64h3.8V32.8c-0.8-0.1-1.6-0.2-2.4-0.2C30.9 32.7 30.4 32.7 30 32.7M39.6 34.9c-1.2-0.7-2.6-1.3-4-1.7V64h5.7V32.6C40.7 33.4 40.1 34.1 39.6 34.9M43.2 30.8V64h35.9v0C86.6 63.5 90 58.8 90 53.1c0-6-4.6-10.9-10.7-10.9 -1.6 0-2.9 0.3-4.2 0.9C74.1 33.5 65.9 26 55.9 26 51 26 46.6 27.8 43.2 30.8"/></svg></a>
+                  </div>
 
-
+                  <div class="social-icons"><!-- instagram -->
+                          <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  stroke="white" fill="white" viewBox="0 0 169.1 169.1"><path d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.8c0 25.7 20.9 46.7 46.7 46.7h75.8c25.7 0 46.7-20.9 46.7-46.7V46.7C169.1 20.9 148.1 0 122.4 0zM154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7C29.2 154.1 15 139.9 15 122.4V46.7C15 29.2 29.2 15 46.7 15h75.8c17.5 0 31.7 14.2 31.7 31.7V122.4z"/><path d="M84.5 41c-24 0-43.6 19.5-43.6 43.6 0 24 19.5 43.6 43.6 43.6s43.6-19.5 43.6-43.6C128.1 60.5 108.6 41 84.5 41zM84.5 113.1c-15.7 0-28.6-12.8-28.6-28.6 0-15.7 12.8-28.6 28.6-28.6s28.6 12.8 28.6 28.6C113.1 100.3 100.3 113.1 84.5 113.1z"/><path d="M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2 -2.1 2-3.2 4.9-3.2 7.8 0 2.9 1.2 5.7 3.2 7.8 2 2 4.9 3.2 7.8 3.2 2.9 0 5.7-1.2 7.8-3.2 2.1-2 3.2-4.9 3.2-7.8 0-2.9-1.2-5.7-3.2-7.8C135.7 29.4 132.8 28.3 129.9 28.3z"/></svg></a>
+                  </div>
+        </div>
+  </div>
 </footer>
 
 

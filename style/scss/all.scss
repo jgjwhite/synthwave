@@ -11,7 +11,8 @@
 //all variables: color, type, etc.
 @import 'var';
 
-
+//interactivity
+@import 'interactive';
 
 /* ========================================
 Global Styles
@@ -93,7 +94,7 @@ h1 {
 h2 {
   font-family: $display-font;
   font-size: 1.85em; //mobile
-  padding: 1.85em 0 1em;
+  padding: 1.85em 0 1.35em;
 
   @media screen and (min-width: 40em) {
       font-size: 2.25em; //tablet+
@@ -155,9 +156,6 @@ a {
 }
 
 
-a:hover {
-  text-shadow: 2px 2px 5px $neon-pink;
-}
 
 .btn {//inspired by Bloomberg's button style www.bloomberg.com
   width: 120px;
@@ -166,7 +164,7 @@ a:hover {
   background-color: $bkgd-dark;
   color: $neon-pink;
 
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,10 +178,10 @@ a:hover {
   width: 120px;
   height: 40px;
   background-color: $neon-pink;
-  content: "pink drop shadow";
+  content: "";
   position: absolute;
   top: 0.55em;
-  left: -0.55em;
+  left: -0.65em;
   z-index: -1;
 
   @media screen and (min-width: 40em) {
@@ -191,10 +189,12 @@ a:hover {
     height: 60px;
   }
 }
-.btn-prop {
+
+.btn-prop {//pushes the :before element on top of the bkgd
   position: absolute;
   z-index: 1;
 }
+
 
 
 /* ========================================
@@ -378,23 +378,35 @@ Specific Element Styles
         width: 100%;
         height: 300px;
         float: left;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
       }
 
+      #rules {
+        margin-bottom: 60px;
+      }
+
+      //rule box properties
       .rules-style {
+        height: 60px;
         margin-bottom: 25px;
 
-        border: 4px solid $neon-cyan;
-        color: $neon-cyan;
-        font-size: 1.2em; //14px
+        border: 4px solid $neon-pink;
+        color: $neon-pink;
+        font-size: 1.2em;
+        text-align: center;
 
-        @include aspect-ratio(3,1); //TODO improve text centering ...
-
+        //position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-      }
 
+        @media screen and (min-width: 40em) {
+          height: 90px;
+        }
+        @media screen and (min-width: 55em) {
+          height: 120px;
+        }
+      }
 
 /* --------------  Connect   ----------------- */
 
@@ -403,11 +415,12 @@ Specific Element Styles
       }
 
       input {
-        width: 100%;
+        width: 90%;
         margin-bottom: 20px;
 
+        background-color: $bkgd-dark;
         border: 0px;
-        border-bottom: 1px solid $bkgd-medium;
+        border-bottom: 1px solid $neon-pink;
         outline: none;
       }
 
@@ -415,16 +428,39 @@ Specific Element Styles
 /* --------------   Footer   -------------------- */
 
       footer {
-        margin-top: 40px;
-        margin-bottom: 80px;
+        //gradient bkgd
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bf26bc+0,232323+100 */
+        background: #bf26bc; /* Old browsers */
+        background: -moz-linear-gradient(top,  #232323 0%, #bf26bc 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #232323 0%,#bf26bc 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #232323 0%,#bf26bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232323', endColorstr='#bf26bc',GradientType=0 ); /* IE6-9 */
 
-              svg {
-                width: 100%;
-              }
+        padding-bottom: 60px;
+        color: #fff;
+
+          svg {
+            width: 100%;
+          }
+
         }
 
+        .foot-title {
+          font-family: 'Press Start 2P', sans-serif;
+          font-weight: 400;
+          font-size: 1.55em;
+          margin-bottom: 0.4em;
+        }
 
+        .social-wrap {
+          text-align: center;
+          margin-top: 25px;
 
-      .social-icons {
-        max-width: 60px; //mobile max width
-      }
+        }
+        .social-icons {
+          display:inline-block;
+          width: 32px;
+          height: 32px;
+          margin-left: 24px;
+          margin-left: 24px;
+        }

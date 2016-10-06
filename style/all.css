@@ -378,19 +378,19 @@ th {
 .column, .columns {
   width: 100%;
   float: left;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem; }
+  padding-left: 1.65em;
+  padding-right: 1.65 em; }
 
 @media screen and (min-width: 40em) {
   .column, .columns {
-    padding-left: 0.9rem;
-    padding-right: 0.9rem; } }
+    padding-left: 2em;
+    padding-right: 2rem; } }
 .flex {
   display: flex;
   justify-content: center; }
 
 .spacer {
-  margin-bottom: 25px; }
+  margin-bottom: 1.5em; }
 
 /*
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
@@ -482,6 +482,20 @@ th {
   /* 1200px and above */
   body {
     font-size: 100%; } }
+a:hover {
+  text-shadow: 2px 2px 5px magenta; }
+
+.btn:hover {
+  transform: translate(-0.35em, 0.35em);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  background-color: magenta;
+  color: #fff;
+  border: 2px solid #fff; }
+
+.btn:hover:before {
+  transform: translate3d(0.35rem, -0.35rem, -1em); }
+
 /* ========================================
 Global Styles
 ========================================
@@ -552,7 +566,7 @@ h1 {
 h2 {
   font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-size: 1.85em;
-  padding: 1.85em 0 1em; }
+  padding: 1.85em 0 1.35em; }
   @media screen and (min-width: 40em) {
     h2 {
       font-size: 2.25em;
@@ -600,16 +614,13 @@ a {
   text-decoration: none;
   color: magenta; }
 
-a:hover {
-  text-shadow: 2px 2px 5px magenta; }
-
 .btn {
   width: 120px;
   height: 40px;
   border: 2px solid magenta;
   background-color: #232323;
   color: magenta;
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -622,10 +633,10 @@ a:hover {
   width: 120px;
   height: 40px;
   background-color: magenta;
-  content: "pink drop shadow";
+  content: "";
   position: absolute;
   top: 0.55em;
-  left: -0.55em;
+  left: -0.65em;
   z-index: -1; }
   @media screen and (min-width: 40em) {
     .btn:before {
@@ -785,48 +796,73 @@ Specific Element Styles
   width: 100%;
   height: 300px;
   float: left;
-  margin-bottom: 80px; }
+  margin-bottom: 60px; }
+
+#rules {
+  margin-bottom: 60px; }
 
 .rules-style {
+  height: 60px;
   margin-bottom: 25px;
-  border: 4px solid cyan;
-  color: cyan;
+  border: 4px solid magenta;
+  color: magenta;
   font-size: 1.2em;
-  position: relative;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .rules-style:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 33.33333%; }
-  .rules-style > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+  @media screen and (min-width: 40em) {
+    .rules-style {
+      height: 90px; } }
+  @media screen and (min-width: 55em) {
+    .rules-style {
+      height: 120px; } }
 
 /* --------------  Connect   ----------------- */
 #connect {
   margin-bottom: 160px; }
 
 input {
-  width: 100%;
+  width: 90%;
   margin-bottom: 20px;
+  background-color: #232323;
   border: 0px;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid magenta;
   outline: none; }
 
 /* --------------   Footer   -------------------- */
 footer {
-  margin-top: 40px;
-  margin-bottom: 80px; }
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bf26bc+0,232323+100 */
+  background: #bf26bc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #232323 0%, #bf26bc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #232323 0%, #bf26bc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #232323 0%, #bf26bc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232323', endColorstr='#bf26bc',GradientType=0 );
+  /* IE6-9 */
+  padding-bottom: 60px;
+  color: #fff; }
   footer svg {
     width: 100%; }
 
+.foot-title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-weight: 400;
+  font-size: 1.55em;
+  margin-bottom: 0.4em; }
+
+.social-wrap {
+  text-align: center;
+  margin-top: 25px; }
+
 .social-icons {
-  max-width: 60px; }
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 24px;
+  margin-left: 24px; }
 
 /*# sourceMappingURL=all.css.map */

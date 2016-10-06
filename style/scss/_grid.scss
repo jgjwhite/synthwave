@@ -31,13 +31,13 @@
 .column, .columns {
   width: 100%;
   float: left;
-  padding-left: 0.6rem; //TODO target / context = result
-  padding-right: 0.6rem; }
+  padding-left: 1.65em; //mobile
+  padding-right: 1.65 em; }
 
   @media screen and (min-width: 40em) { //tablets, desktops
     .column, .columns {
-      padding-left: 0.9rem; //increase padding
-      padding-right: 0.9rem; } }
+      padding-left: 2em;
+      padding-right: 2rem; } }
 
 //Layout Tweaking
 
@@ -47,7 +47,7 @@
     }
 
     .spacer {
-      margin-bottom: 25px;
+      margin-bottom: 1.5em;
     }
 
 /*
