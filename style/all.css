@@ -541,36 +541,60 @@ img {
 h1 {
   font-family: 'Press Start 2P', sans-serif;
   font-weight: 700;
-  font-size: 2em; }
+  font-size: 1.55em; }
   @media screen and (min-width: 40em) {
+    h1 {
+      font-size: 2.75em; } }
+  @media screen and (min-width: 55em) {
     h1 {
       font-size: 3.75em; } }
 
 h2 {
   font-family: "Native-Regular", Arial, Helvetica, cursive;
-  font-size: 2.25em;
-  /* 36px / 16px = 2.25em */
-  padding: 2.25rem 0 1rem; }
+  font-size: 1.85em;
+  padding: 1.85em 0 1em; }
+  @media screen and (min-width: 40em) {
+    h2 {
+      font-size: 2.25em;
+      padding: 2.25em 0 0.5em; } }
 
 h3 {
   font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 500;
   font-size: 1.4em;
-  padding-bottom: 2em; }
+  padding: 0.95em 0 0.45em 0; }
 
 h4 {
   font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 500;
-  font-size: 1.25em;
-  padding-bottom: 2em; }
+  font-size: 0.9em;
+  padding-top: 0.45em;
+  padding-bottom: 3em;
+  padding-left: 0.35em; }
   @media screen and (min-width: 40em) {
     h4 {
-      font-size: 1.5em; } }
+      font-size: 1.45em; } }
+  @media screen and (min-width: 55em) {
+    h4 {
+      font-size: 1.8em; } }
 
 h5 {
   font-family: "Native-Regular", Arial, Helvetica, cursive;
   font-weight: 300;
-  font-size: 1.4em; }
+  font-size: 0.9em; }
+  @media screen and (min-width: 40em) {
+    h5 {
+      font-size: 1.15em; } }
+
+p {
+  font-family: "Native-Regular", Arial, Helvetica, sans-serif;
+  font-size: 1em; }
+  @media screen and (min-width: 40em) {
+    p {
+      font-size: 0.85em; } }
+  @media screen and (min-width: 55em) {
+    p {
+      font-size: 1em; } }
 
 a {
   text-decoration: none;
@@ -580,14 +604,37 @@ a:hover {
   text-shadow: 2px 2px 5px magenta; }
 
 .btn {
-  width: 155px;
-  height: 60px;
+  width: 120px;
+  height: 40px;
   border: 2px solid magenta;
+  background-color: #232323;
   color: magenta;
-  font-size: 0.8em;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media screen and (min-width: 40em) {
+    .btn {
+      width: 155px;
+      height: 60px; } }
+
+.btn:before {
+  width: 120px;
+  height: 40px;
+  background-color: magenta;
+  content: "pink drop shadow";
+  position: absolute;
+  top: 0.55em;
+  left: -0.55em;
+  z-index: -1; }
+  @media screen and (min-width: 40em) {
+    .btn:before {
+      width: 155px;
+      height: 60px; } }
+
+.btn-prop {
+  position: absolute;
+  z-index: 1; }
 
 /* ========================================
 Specific Element Styles
@@ -613,18 +660,24 @@ Specific Element Styles
   margin-bottom: 24px; }
 
 .logo {
-  width: 120px;
+  width: 80px;
   height: auto;
   float: left; }
   .logo svg {
     width: 100%; }
   @media screen and (min-width: 40em) {
     .logo {
-      width: 180px; } }
+      width: 120px; } }
 
 .menu ul {
   display: none;
   list-style-type: none; }
+  .menu ul h3 {
+    font-family: "Native-Regular", Arial, Helvetica, cursive;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 0.35em 0 0 0; }
 .menu .menu-mobile {
   float: right; }
 .menu #hamburger {
@@ -654,12 +707,9 @@ Specific Element Styles
       display: none; } }
 
 .display-text {
-  margin-top: 15vh; }
+  margin-top: 25vh; }
 
 /* --------------  News & Media  ----------------- */
-#news {
-  margin-bottom: 60px; }
-
 .news-card {
   background-color: #414141;
   padding: 0;
@@ -695,8 +745,10 @@ Specific Element Styles
     @media screen and (min-width: 40em) and (max-width: 55em) {
       .text p {
         font-size: 85%; } }
-  .text .limit {
-    height: 120px; }
+  .text .wrap-text {
+    display: flex; }
+    .text .wrap-text p {
+      flex: 1; }
   .text .foot-link {
     width: 50%;
     float: left; }
@@ -704,13 +756,10 @@ Specific Element Styles
     text-align: right; }
 
 /* --------------  Artist Line-up  ----------------- */
-#line-up {
-  margin-top: 40px;
-  margin-bottom: 80px; }
-  #line-up svg {
-    height: 100%;
-    width: auto;
-    padding: 5%; }
+#line-up svg {
+  height: 100%;
+  width: auto;
+  padding: 5%; }
 
 .aspect {
   position: relative; }
@@ -732,22 +781,11 @@ Specific Element Styles
   justify-content: center; }
 
 /* --------------  Festival Info  ----------------- */
-#info {
-  margin-top: 40px; }
-
-#location {
-  margin-top: 60px; }
-
 #map {
   width: 100%;
   height: 300px;
   float: left;
   margin-bottom: 80px; }
-
-#rules {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px; }
 
 .rules-style {
   margin-bottom: 25px;
@@ -772,8 +810,7 @@ Specific Element Styles
 
 /* --------------  Connect   ----------------- */
 #connect {
-  margin-top: 40px;
-  margin-bottom: 80px; }
+  margin-bottom: 160px; }
 
 input {
   width: 100%;
@@ -787,24 +824,7 @@ footer {
   margin-top: 40px;
   margin-bottom: 80px; }
   footer svg {
-    width: 100%;
-    height: auto;
-    color: magenta; }
-
-.logo-foot {
-  background-color: magenta;
-  position: relative; }
-  .logo-foot:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 33.33333%; }
-  .logo-foot > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+    width: 100%; }
 
 .social-icons {
   max-width: 60px; }

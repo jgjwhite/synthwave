@@ -78,43 +78,75 @@ html {
 h1 {
     font-family: 'Press Start 2P', sans-serif;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.55em;
+
 
     //tablet, desktop size
     @media screen and (min-width: 40em) {
-      font-size: 3.75em; //60px / 16px = 3.75em
+      font-size: 2.75em;
+    }
+    @media screen and (min-width: 55em) {
+      font-size: 3.75em;
     }
 }
 
 h2 {
   font-family: $display-font;
-  font-size: 2.25em; /* 36px / 16px = 2.25em */
-  padding: 2.25rem 0 1rem;
+  font-size: 1.85em; //mobile
+  padding: 1.85em 0 1em;
+
+  @media screen and (min-width: 40em) {
+      font-size: 2.25em; //tablet+
+      padding: 2.25em 0 0.5em;
+  }
 }
 
 h3 {
   font-family: $display-font;
   font-weight: 500;
   font-size: 1.4em;
-  padding-bottom: 2em;
+  padding: 0.95em 0 0.45em 0;
 }
 
-h4 {
+h4 { //sub-header on hero only.
   font-family: $display-font;
   font-weight: 500;
-  font-size: 1.25em;
-  padding-bottom: 2em;
+  font-size: 0.9em;
+
+  padding-top: 0.45em;
+  padding-bottom: 3em; //pushing button down
+  padding-left: 0.35em;
 
   //desktop, tablet size
   @media screen and (min-width: 40em) {
-    font-size: 1.5em; //24px / 16px = 1.5em
+    font-size: 1.45em;
+  }
+  @media screen and (min-width: 55em) {
+    font-size: 1.8em;
   }
 }
 
 h5 { //used for buttons
   font-family: $display-font;
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 0.9em;
+
+  @media screen and (min-width: 40em) {
+      font-size: 1.15em;
+  }
+}
+
+p {
+  font-family: $body-font;
+  font-size: 1em;//mobile
+
+  @media screen and (min-width: 40em) {
+    font-size: 0.85em;
+  }
+  @media screen and (min-width: 55em) {
+    font-size: 1em;
+  }
+
 }
 
 a {
@@ -123,20 +155,45 @@ a {
 }
 
 
-a:hover { //TODO change to mixin, add to interaction layer (aggregate interactions in section too?)
+a:hover {
   text-shadow: 2px 2px 5px $neon-pink;
 }
 
-.btn {
-  width: 155px;
-  height: 60px;
+.btn {//inspired by Bloomberg's button style www.bloomberg.com
+  width: 120px;
+  height: 40px;
   border: 2px solid $neon-pink;
+  background-color: $bkgd-dark;
   color: $neon-pink;
-  font-size: 0.8em; //14px
 
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 40em) {
+    width: 155px;
+    height: 60px;
+  }
+}
+.btn:before {
+  width: 120px;
+  height: 40px;
+  background-color: $neon-pink;
+  content: "pink drop shadow";
+  position: absolute;
+  top: 0.55em;
+  left: -0.55em;
+  z-index: -1;
+
+  @media screen and (min-width: 40em) {
+    width: 155px;
+    height: 60px;
+  }
+}
+.btn-prop {
+  position: absolute;
+  z-index: 1;
 }
 
 
@@ -159,25 +216,21 @@ Specific Element Styles
       background: linear-gradient(to bottom,  #bf26bc 0%,#232323 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf26bc', endColorstr='#232323',GradientType=0 ); /* IE6-9 */
 
-
     }
     .nav-bar {
-      margin-top: 42px;   //TODO Express heights in PX or EM?
+      margin-top: 42px;
       margin-bottom: 24px;
     }
 
-    //Logo Placeholder
-    // do not full-scale; instead, change size for small screens only.
     .logo {
-      width: 120px; //size on mobile -- aspect(3,1)
+      width: 80px; //mobile
       height: auto;
       float: left;
-
         svg {
           width: 100%;
         }
       @media screen and (min-width: 40em) {
-        width: 180px; //height on tablet, desktop
+        width: 120px; //height on tablet, desktop
 
       }
     }
@@ -186,11 +239,20 @@ Specific Element Styles
                 ul {
                   display: none;
                   list-style-type: none;
+                        h3 {//custom type adjustments
+                          font-family: $display-font;
+                          color: #fff;
+                          font-weight: 500;
+                          font-size: 1.2em;
+                          padding: 0.35em 0 0 0;
+                        }
+
                 }
                 .menu-mobile {
                   float: right;
                 }
-                #hamburger {
+
+                #hamburger {//draw hamburger menu (mobile only)
                   cursor: help;
                   padding: 10px 35px 16px 0;
 
@@ -205,7 +267,7 @@ Specific Element Styles
                     content: '';
                   }
                   span:before {
-                    top: -10px; //TODO how does this work? what is the before/after crap?
+                    top: -10px;
                   }
                   span:after {
                     bottom: -10px;
@@ -227,14 +289,13 @@ Specific Element Styles
     }
 
     .display-text {
-      margin-top: 15vh;
+      margin-top: 25vh;
     }
 
-/* --------------  News & Media  ----------------- */
 
-      #news {
-        margin-bottom: 60px;
-      }
+
+
+/* --------------  News & Media  ----------------- */
 
       .news-card { //mobile setting
         background-color: $bkgd-medium;
@@ -242,8 +303,6 @@ Specific Element Styles
         padding-bottom: 40px;
         margin-bottom: 60px;
         @include shadow;
-//TODO Set a uniform px height; or reflow with content? good practice?
-
 
       }
 
@@ -271,8 +330,12 @@ Specific Element Styles
               }
         }
 
-        .limit {//Limit designed to overflow any text, keeping cards consistent size...
-          height: 120px;
+        .wrap-text {
+          display: flex;
+
+          p {
+            flex: 1;
+          }
         }
 
         //TODO card links -- fixing these links so that they respond to the text above?
@@ -288,17 +351,12 @@ Specific Element Styles
 
 
 /* --------------  Artist Line-up  ----------------- */
-
-      #line-up { //TODO DRY the section wrappers ...
-        margin-top: 40px;
-        margin-bottom: 80px;
-
-        svg {
-          height: 100%;
-          width: auto;
-          padding: 5%;
-
-        }
+      #line-up {
+          svg {
+            height: 100%;
+            width: auto;
+            padding: 5%;
+          }
       }
 
       .aspect {
@@ -315,27 +373,12 @@ Specific Element Styles
 
 /* --------------  Festival Info  ----------------- */
 
-      #info {
-        margin-top: 40px;
-      }
-
-      #location {
-        margin-top: 60px;
-      }
 
       #map {
         width: 100%;
         height: 300px;
         float: left;
         margin-bottom: 80px;
-
-      }
-
-      //TODO clean up baseline here ..
-      #rules {
-        width: 100%;
-        margin-top: 40px;
-        margin-bottom: 40px;
       }
 
       .rules-style {
@@ -356,8 +399,7 @@ Specific Element Styles
 /* --------------  Connect   ----------------- */
 
       #connect {
-        margin-top: 40px;
-        margin-bottom: 80px;
+        margin-bottom: 160px;
       }
 
       input {
@@ -378,15 +420,10 @@ Specific Element Styles
 
               svg {
                 width: 100%;
-                height: auto;
-                color: $neon-pink;
               }
         }
 
-      .logo-foot {
-          background-color: $neon-pink;
-          @include aspect-ratio(3,1);
-      }
+
 
       .social-icons {
         max-width: 60px; //mobile max width
