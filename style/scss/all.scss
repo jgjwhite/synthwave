@@ -235,58 +235,92 @@ Specific Element Styles
       }
     }
 
-    .menu {
-                ul {
-                  display: none;
-                  list-style-type: none;
-                        h3 {//custom type adjustments
-                          font-family: $display-font;
-                          color: #fff;
-                          font-weight: 500;
-                          font-size: 1.2em;
-                          padding: 0.35em 0 0 0;
-                        }
 
-                }
-                .menu-mobile {
-                  float: right;
-                }
+.overlay-menu {
+  //mobile
 
-                #hamburger {//draw hamburger menu (mobile only)
-                  cursor: help;
-                  padding: 10px 35px 16px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0);
+  z-index: 2;
 
-                  span, span:before, span:after {
-                    cursor: pointer;
-                    border-radius: 1px;
-                    height: 5px;
-                    width: 35px;
-                    background: white;
-                    position: absolute;
-                    display: block;
-                    content: '';
-                  }
-                  span:before {
-                    top: -10px;
-                  }
-                  span:after {
-                    bottom: -10px;
-                  }
-                }
+  .menu-mobile { //icon design
+        cursor: help;
+        padding: 10px 35px 16px 0;
 
-                //For tablet, desktop, show menu.
-                @media screen and (min-width:40em) {
-                          width: 25%;
-                          float: right;
+        position: relative;
+        float: right;
+        margin: 40px;
 
-                          ul {
-                            display: block;
-                            list-style-type: none;
-                          }
-                          .menu-mobile { display: none; }
-                      }
+        //Draw menu using pseudo-elements
+        span, span:before, span:after {
+          cursor: pointer;
+          border-radius: 1px;
+          height: 5px;
+          width: 35px;
+          background: white;
+          position: absolute;
+          display: block;
+          content: '';
+        }
+        span:before {
+          top: -10px;
+        }
+        span:after {
+          bottom: -10px;
+        }
+      }
 
+  .menu-list { //hide menu list
+    display: none;
+  }
+
+
+
+  @media screen and (min-width: 40em) {
+      .menu-mobile {
+        display: none;
+      }
+      .menu-list { //menu display on tablets +
+        display: block;
+        float: right;
+        list-style-type: none;
+
+        margin-top: 25px;
+        margin-right: 40px;
+
+          h3 {//custom type adjustments
+            font-weight: 500;
+            font-size: 1.2em;
+            padding: 0.35em 0 0 0;
+          }
+
+      }
+
+  }
+}
+
+  .active .overlay-menu { //on click
+
+    transition: all 0.2s ease;
+    background-color: rgba(0,0,0,0.9);
+
+          .menu-list { //display on center
+            display: block;
+
+            transition: all 0.4s ease;
+            padding: 0;
+            list-style-type: none;
+
+            text-align: center;
+            margin-top: 35%;
+
+          }
     }
+
 
     .display-text {
       margin-top: 25vh;
@@ -448,16 +482,24 @@ Specific Element Styles
         .foot-title {
           font-family: 'Press Start 2P', sans-serif;
           font-weight: 400;
-          font-size: 1.55em;
+          font-size: 1em;
           margin-bottom: 0.4em;
+
+          //tablet, desktop size
+          @media screen and (min-width: 40em) {
+            font-size: 1.85em;
+          }
         }
 
         .social-wrap {
-            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
         }
         .social-icons {
-          width: 32px;
-          height: 32px;
-          display: inline-block;
+          width: 48px;
+          float: left;
+          margin-left: 15px;
+          margin-right: 15px;
 
         }

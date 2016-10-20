@@ -379,7 +379,7 @@ th {
   width: 100%;
   float: left;
   padding-left: 1.65em;
-  padding-right: 1.65 em; }
+  padding-right: 1.65em; }
 
 @media screen and (min-width: 40em) {
   .column, .columns {
@@ -680,42 +680,59 @@ Specific Element Styles
     .logo {
       width: 120px; } }
 
-.menu ul {
-  display: none;
-  list-style-type: none; }
-  .menu ul h3 {
-    font-family: "Native-Regular", Arial, Helvetica, cursive;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.2em;
-    padding: 0.35em 0 0 0; }
-.menu .menu-mobile {
-  float: right; }
-.menu #hamburger {
-  cursor: help;
-  padding: 10px 35px 16px 0; }
-  .menu #hamburger span, .menu #hamburger span:before, .menu #hamburger span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 35px;
-    background: white;
-    position: absolute;
-    display: block;
-    content: ''; }
-  .menu #hamburger span:before {
-    top: -10px; }
-  .menu #hamburger span:after {
-    bottom: -10px; }
-@media screen and (min-width: 40em) {
-  .menu {
-    width: 25%;
-    float: right; }
-    .menu ul {
+.overlay-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 2; }
+  .overlay-menu .menu-mobile {
+    cursor: help;
+    padding: 10px 35px 16px 0;
+    position: relative;
+    float: right;
+    margin: 40px; }
+    .overlay-menu .menu-mobile span, .overlay-menu .menu-mobile span:before, .overlay-menu .menu-mobile span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: white;
+      position: absolute;
       display: block;
-      list-style-type: none; }
-    .menu .menu-mobile {
-      display: none; } }
+      content: ''; }
+    .overlay-menu .menu-mobile span:before {
+      top: -10px; }
+    .overlay-menu .menu-mobile span:after {
+      bottom: -10px; }
+  .overlay-menu .menu-list {
+    display: none; }
+  @media screen and (min-width: 40em) {
+    .overlay-menu .menu-mobile {
+      display: none; }
+    .overlay-menu .menu-list {
+      display: block;
+      float: right;
+      list-style-type: none;
+      margin-top: 25px;
+      margin-right: 40px; }
+      .overlay-menu .menu-list h3 {
+        font-weight: 500;
+        font-size: 1.2em;
+        padding: 0.35em 0 0 0; } }
+
+.active .overlay-menu {
+  transition: all 0.2s ease;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .active .overlay-menu .menu-list {
+    display: block;
+    transition: all 0.4s ease;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 35%; }
 
 .display-text {
   margin-top: 25vh; }
@@ -851,16 +868,21 @@ footer {
 .foot-title {
   font-family: 'Press Start 2P', sans-serif;
   font-weight: 400;
-  font-size: 1.55em;
+  font-size: 1em;
   margin-bottom: 0.4em; }
+  @media screen and (min-width: 40em) {
+    .foot-title {
+      font-size: 1.85em; } }
 
 .social-wrap {
-  position: relative;
-  margin: 0 auto; }
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; }
 
 .social-icons {
-  width: 32px;
-  height: 32px;
-  float: left; }
+  width: 48px;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px; }
 
 /*# sourceMappingURL=all.css.map */
