@@ -281,6 +281,8 @@ Specific Element Styles
 
 
   @media screen and (min-width: 40em) {
+      display: none;
+
       .menu-mobile {
         display: none;
       }
